@@ -12,6 +12,8 @@
 		5742A5C8210959D800803BAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5742A5C6210959D800803BAC /* Main.storyboard */; };
 		5742A5CA210959D900803BAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5742A5C9210959D900803BAC /* Assets.xcassets */; };
 		5742A5CD210959D900803BAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5742A5CB210959D900803BAC /* LaunchScreen.storyboard */; };
+		574D4D9A210E96B800C323B3 /* LeetString+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D4D99210E96B800C323B3 /* LeetString+Test.swift */; };
+		575D2AF0210A9FB00011F198 /* LeetString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575D2AEF210A9FB00011F198 /* LeetString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		5742A5C9210959D900803BAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5742A5CC210959D900803BAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5742A5CE210959D900803BAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		574D4D99210E96B800C323B3 /* LeetString+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetString+Test.swift"; sourceTree = "<group>"; };
+		575D2AEF210A9FB00011F198 /* LeetString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,38 @@
 			children = (
 				5742A5C2210959D800803BAC /* AppDelegate.swift */,
 				5742A5C4210959D800803BAC /* ViewController.swift */,
+				575D2AEE210A9F800011F198 /* LinkList */,
+				575D2AED210A9F800011F198 /* String */,
+				575D2AEC210A9F800011F198 /* Tree */,
 				5742A5C6210959D800803BAC /* Main.storyboard */,
 				5742A5C9210959D900803BAC /* Assets.xcassets */,
 				5742A5CB210959D900803BAC /* LaunchScreen.storyboard */,
 				5742A5CE210959D900803BAC /* Info.plist */,
 			);
 			path = "Algorithm-LeetCode";
+			sourceTree = "<group>";
+		};
+		575D2AEC210A9F800011F198 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
+		575D2AED210A9F800011F198 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				575D2AEF210A9FB00011F198 /* LeetString.swift */,
+				574D4D99210E96B800C323B3 /* LeetString+Test.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		575D2AEE210A9F800011F198 /* LinkList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LinkList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				574D4D9A210E96B800C323B3 /* LeetString+Test.swift in Sources */,
 				5742A5C5210959D800803BAC /* ViewController.swift in Sources */,
+				575D2AF0210A9FB00011F198 /* LeetString.swift in Sources */,
 				5742A5C3210959D800803BAC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
