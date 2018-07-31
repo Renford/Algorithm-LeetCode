@@ -10,7 +10,7 @@ import UIKit
 
 class LeetString: NSObject {
 
-    // 3. 无重复字符的最长子串
+    /// 3. 无重复字符的最长子串
     func lengthOfLongestSubstring(_ s: String) -> Int {
         var length = 0
 
@@ -29,7 +29,7 @@ class LeetString: NSObject {
         return length
     }
 
-    // 5. 最长回文子串（如aa、abcba、abba）
+    /// 5. 最长回文子串（如aa、abcba、abba）
     func longestPalindrome(_ s: String) -> String {
         if s.count == 0 {
             return s
@@ -74,8 +74,8 @@ class LeetString: NSObject {
         return result
     }
 
-    // 14. 最长公共前缀
-    // https://leetcode-cn.com/problems/longest-common-prefix/description/
+    /// 14. 最长公共前缀
+    /// https://leetcode-cn.com/problems/longest-common-prefix/description/
     func longestCommonPrefix(_ strs: [String]) -> String {
         if strs.count == 0 {
             return ""
