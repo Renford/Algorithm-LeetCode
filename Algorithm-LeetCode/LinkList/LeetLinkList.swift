@@ -16,19 +16,32 @@ public class ListNode {
         self.next = nil
     }
 }
-
+/// https://www.cnblogs.com/grandyang/p/4606710.html
 class LeetLinkList: NSObject {
     func mergeKLists(_ lists: [ListNode?]) -> ListNode? {
         let head = ListNode(0)
 
-        var hasNext = false
-        while true {
+        var tempList: [ListNode] = []
+        lists.forEach { (list) in
+            if let l = list {
+                tempList.append(l)
+            }
+        }
 
-            var tempList: [ListNode?] = []
-            lists.forEach { (list) in
-                list?.next
+        while tempList.count > 0 {
+            var minValue = Int.max
+            var tempNode: ListNode = ListNode(0)
+
+            tempList.enumerated().forEach { (index, node) in
+                if minValue > node.val {
+                    minValue = node.val
+                    tempNode = node
+                }
             }
 
+            if minValue < Int.max {
+                head.next = tempNode
+            }
         }
 
         return head.next
