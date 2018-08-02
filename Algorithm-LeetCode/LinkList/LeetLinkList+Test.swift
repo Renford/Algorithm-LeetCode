@@ -9,6 +9,28 @@
 import Foundation
 
 extension LeetLinkList {
+    
+    func testMergeTwoLists() {
+        print("\n=========两个有序链表合并 begin =========\n")
+        let array = [
+            [[1, 8, 9], [2, 3, 4]],
+            [[], [2, 3, 4]],
+            [[], []],
+        ]
+        
+        array.forEach { (arr) in
+            let l1 = array2LinkList(arr[0])
+            let l2 = array2LinkList(arr[1])
+            
+            let head = mergeTwoLists(l1, l2)
+            
+            print("=========合并结果=========")
+            travlLinkList(head)
+        }
+        
+        print("\n=========两个有序链表合并 end =========\n")
+    }
+    
     func testMergeKLists() {
         print("\n=========有序链表合并 begin =========\n")
 

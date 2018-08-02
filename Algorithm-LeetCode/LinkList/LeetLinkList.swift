@@ -44,6 +44,28 @@ class LeetLinkList: NSObject {
 }
 
 extension LeetLinkList {
+    /// 21. 合并两个有序链表
+    /// https://leetcode-cn.com/problems/merge-two-sorted-lists/description/
+    func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+        
+        var node: ListNode? = nil
+        if let list1 = l1, let list2 = l2 {
+            if list1.val > list2.val {
+                node = list2
+                node?.next = mergeTwoLists(list1, list2.next)
+            } else {
+                node = list1
+                node?.next = mergeTwoLists(list1.next, list2)
+            }
+        } else if let list1 = l1 {
+            node = list1
+        } else if let list2 = l2 {
+            node = list2
+        }
+        
+        return node
+    }
+
     /// 23. 合并K个有序链表
     /// https://leetcode-cn.com/problems/merge-k-sorted-lists/description/
     func mergeKLists(_ lists: [ListNode?]) -> ListNode? {

@@ -37,7 +37,9 @@ class ViewController: UIViewController {
     func testLinkListAlgorithm() {
         let linkList = LeetLinkList()
 
-        linkList.testMergeKLists()
+        linkList.testMergeTwoLists()
+        
+//        linkList.testMergeKLists()
     }
 }
 
