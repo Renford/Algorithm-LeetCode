@@ -15,6 +15,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
 //        testStringAlgorithm()
+        
+//        testArrayAlgorithm()
 
         testLinkListAlgorithm()
     }
@@ -32,6 +34,17 @@ class ViewController: UIViewController {
 //        str.testLongestPalindrome()
 
         str.testCommonPrefix()
+    }
+    
+    func testArrayAlgorithm() {
+        let leetArray = LeetArray()
+        
+//        leetArray.testPerfectNumber()
+//
+//        leetArray.testMedianNumber()
+        
+        leetArray.testFindMin()
+
     }
 
     func testLinkListAlgorithm() {
