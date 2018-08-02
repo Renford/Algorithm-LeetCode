@@ -14,7 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        testAlgorithm()
+//        testStringAlgorithm()
+
+        testLinkListAlgorithm()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,7 +24,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func testAlgorithm() {
+    func testStringAlgorithm() {
         let str = LeetString()
 
 //        str.testLongestSubstring()
@@ -30,6 +32,12 @@ class ViewController: UIViewController {
 //        str.testLongestPalindrome()
 
         str.testCommonPrefix()
+    }
+
+    func testLinkListAlgorithm() {
+        let linkList = LeetLinkList()
+
+        linkList.testMergeKLists()
     }
 }
 

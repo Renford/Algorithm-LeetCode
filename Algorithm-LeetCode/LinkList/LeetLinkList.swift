@@ -16,31 +16,69 @@ public class ListNode {
         self.next = nil
     }
 }
-/// https://www.cnblogs.com/grandyang/p/4606710.html
+
 class LeetLinkList: NSObject {
-    func mergeKLists(_ lists: [ListNode?]) -> ListNode? {
+    func array2LinkList(_ arr: [Int]) -> ListNode? {
         let head = ListNode(0)
 
-        var tempList: [ListNode] = []
+        var currNode = head
+        arr.forEach { (value) in
+            let node = ListNode(value)
+            currNode.next = node
+            currNode = currNode.next!
+        }
+
+        return head.next
+    }
+
+    func travlLinkList(_ head: ListNode?) {
+        var currNode = head
+        while currNode != nil {
+            if let node = currNode {
+                print("node = ", node.val)
+                currNode = node.next
+            }
+        }
+    }
+
+}
+
+extension LeetLinkList {
+    /// 23. 合并K个有序链表
+    /// https://leetcode-cn.com/problems/merge-k-sorted-lists/description/
+    func mergeKLists(_ lists: [ListNode?]) -> ListNode? {
+
+        var tempList: [ListNode?] = []
         lists.forEach { (list) in
             if let l = list {
                 tempList.append(l)
             }
         }
 
+        let head = ListNode(0)
+        var currNode = head
         while tempList.count > 0 {
             var minValue = Int.max
             var tempNode: ListNode = ListNode(0)
+            var tempIndex: Int = 0
 
             tempList.enumerated().forEach { (index, node) in
-                if minValue > node.val {
-                    minValue = node.val
-                    tempNode = node
+                if let n = node, minValue > n.val {
+                    minValue = n.val
+                    tempNode = n
+                    tempIndex = index
                 }
             }
 
             if minValue < Int.max {
-                head.next = tempNode
+                currNode.next = tempNode
+                currNode = currNode.next!
+
+                if let node = tempNode.next {
+                    tempList[tempIndex] = node
+                } else {
+                    tempList.remove(at: tempIndex)
+                }
             }
         }
 
