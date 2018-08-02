@@ -60,4 +60,24 @@ extension LeetLinkList {
 
         print("\n=========有序链表合并 end =========\n")
     }
+    
+    func testRemoveNthFromEnd() {
+        print("\n=========删除倒数第n个节点 begin =========\n")
+        
+        let array = [
+            [1, 4, 5, 2, 3],
+            []
+        ]
+        
+        array.forEach { (arr) in
+            let list = array2LinkList(arr)
+            print("delete before：\n")
+            travlLinkList(list)
+            let result = removeNthFromEnd(list, 5)
+            print("delete after：\n")
+            travlLinkList(result)
+        }
+        
+        print("\n=========删除倒数第n个节点 end =========\n")
+    }
 }
