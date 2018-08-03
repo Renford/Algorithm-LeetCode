@@ -132,4 +132,32 @@ class LeetArray: NSObject {
         
         return minValue
     }
+
+    /// 554. 砖墙
+    /// https://leetcode-cn.com/problems/brick-wall/description/
+    func leastBricks(_ wall: [[Int]]) -> Int {
+        var tempDic: [Int: Int] = [:]
+        wall.forEach { (arr) in
+            var sum = 0
+            arr.enumerated().forEach({ (index, value) in
+                if index < arr.count - 1 {
+                    sum += value
+                    if let count = tempDic[sum] {
+                        tempDic[sum] = count + 1
+                    } else {
+                        tempDic[sum] = 1
+                    }
+                }
+            })
+        }
+
+        var maxCount = 0
+        tempDic.values.forEach { (cnt) in
+            if maxCount < cnt {
+                maxCount = cnt
+            }
+        }
+
+        return wall.count - maxCount
+    }
 }

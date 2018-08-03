@@ -16,9 +16,9 @@ class ViewController: UIViewController {
 
 //        testStringAlgorithm()
         
-//        testArrayAlgorithm()
+        testArrayAlgorithm()
 
-        testLinkListAlgorithm()
+//        testLinkListAlgorithm()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +43,9 @@ class ViewController: UIViewController {
 //
 //        leetArray.testMedianNumber()
         
-        leetArray.testFindMin()
+//        leetArray.testFindMin()
+
+        leetArray.testLeastBricks()
 
     }
 

@@ -52,4 +52,20 @@ extension LeetArray {
         }
         print("========升序旋转数组测试结束=========\n")
     }
+
+    func testLeastBricks() {
+        print("========砖墙 begin=========\n")
+        let array = [
+            [1,2,2,1,2,2,1],
+            [3,1,3,2,1,1],
+            [1,3,2,1,4],
+            [2,4,5],
+            [3,1,2,1,1,3],
+            [1,3,1,1,1,4]
+        ]
+
+        let result = leastBricks(array)
+        print("result:", result)
+        print("========砖墙 end=========\n")
+    }
 }
