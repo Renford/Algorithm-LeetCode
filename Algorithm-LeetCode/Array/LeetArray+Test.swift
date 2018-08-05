@@ -68,4 +68,18 @@ extension LeetArray {
         print("result:", result)
         print("========砖墙 end=========\n")
     }
+    
+    func testIntersectionSizeTwo() {
+        print("========交集大小 begin=========\n")
+        let arr: [[Int]] = [
+            [12, 19],
+            [18, 25],
+            [4, 6],
+            [19, 24],
+            [19, 22]
+        ]
+        let result = intersectionSizeTwo(arr)
+        print("交集大小：", result)
+        print("========交集大小begin=========\n")
+    }
 }

@@ -95,11 +95,22 @@ class LeetString: NSObject {
 
         return result
     }
+    
+    /// 10. 正则表达式匹配
+    /// https://leetcode-cn.com/problems/regular-expression-matching/description/
+    func isMatch(_ s: String, _ p: String) -> Bool {
+        
+        p.enumerated().forEach { (index, char) in
+            
+        }
+        
+        return false
+    }
 }
 
 // MARK: - private method
 extension LeetString {
-    func checkKthEqual(_ strs: [String], _ index: Int) -> Character? {
+    fileprivate func checkKthEqual(_ strs: [String], _ index: Int) -> Character? {
         var result: Character? = nil
         for i in 0 ..< strs.count {
             let str = strs[i]

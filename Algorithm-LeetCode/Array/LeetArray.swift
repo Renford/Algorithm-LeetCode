@@ -160,4 +160,46 @@ class LeetArray: NSObject {
 
         return wall.count - maxCount
     }
+    
+    /// 757. 设置交集大小至少为2
+    /// https://leetcode-cn.com/problems/set-intersection-size-at-least-two/description/
+    func intersectionSizeTwo(_ intervals: [[Int]]) -> Int {
+        
+        var hasUnusual = false
+        
+        // 1、根据尾节点排序
+        let array = intervals.sorted { (arr1, arr2) -> Bool in
+            if let last1 = arr1.last, let last2 = arr2.last, arr1.count > 1, arr2.count > 1 {
+                if last1 < last2 {
+                    return true
+                }
+            } else {
+                hasUnusual = true
+            }
+            return false
+        }
+        
+        if hasUnusual {
+            return Int.min
+        }
+        
+        // 2、遍历排序后的数组
+        var count: Int = 0
+        var value1: Int = -1
+        var value2: Int = -1
+     
+        array.forEach { (arr) in
+            if arr[0] > value2 {
+                count += 2
+                value2 = arr[1]
+                value1 = value2 - 1
+            } else if arr[0] > value1 {
+                count += 1
+                value1 = value2
+                value2 = arr[1]
+            }
+        }
+        
+        return count
+    }
 }

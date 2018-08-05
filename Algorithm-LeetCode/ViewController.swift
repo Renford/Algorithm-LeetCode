@@ -45,7 +45,9 @@ class ViewController: UIViewController {
         
 //        leetArray.testFindMin()
 
-        leetArray.testLeastBricks()
+//        leetArray.testLeastBricks()
+        
+        leetArray.testIntersectionSizeTwo()
 
     }
 
