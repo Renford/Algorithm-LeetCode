@@ -10,6 +10,7 @@ import Foundation
 
 extension LeetTree {
     func testIsBalanced() {
+        print("\n=========平衡二叉树 begin=========\n")
         let array = [
                 [1, 2, 2, 3, 3, nil, nil, 4, 4],
                 [3, 9, 20, nil, nil, 15, 7]
@@ -18,6 +19,10 @@ extension LeetTree {
             print("arr:", arr)
             let tree = array2Tree(arr, 0)
             traverByPreOrder(tree)
+            
+            let result = isBalanced(tree)
+            print("====is banlance:", result)
         }
+        print("\n=========平衡二叉树 end=========\n")
     }
 }

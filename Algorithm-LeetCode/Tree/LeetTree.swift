@@ -57,6 +57,33 @@ class LeetTree: NSObject {
 
 extension LeetTree {
     func isBalanced(_ root: TreeNode?) -> Bool {
-        return false
+        if let node = root {
+            let leftHeight = getHeight(node.left)
+            let rightHeight = getHeight(node.right)
+            if abs(leftHeight - rightHeight) > 1 {
+                return false
+            } else {
+                return isBalanced(node.left) && isBalanced(node.right)
+            }
+        }
+        return true
+    }
+}
+
+extension LeetTree {
+    fileprivate func getHeight(_ root: TreeNode?) -> Int {
+        var count = 0
+        
+        if let node = root {
+            let leftHeight = getHeight(node.left)
+            let rightHeight = getHeight(node.right)
+            if leftHeight > rightHeight {
+                count = leftHeight + 1
+            } else {
+                count = rightHeight + 1
+            }
+        }
+        
+        return count
     }
 }
