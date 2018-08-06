@@ -20,9 +20,43 @@ public class TreeNode {
 }
 
 class LeetTree: NSObject {
+    /// 数组 --> 二叉树
+    func array2Tree(_ arr: [Any], _ index: Int) -> TreeNode? {
+        guard let val = arr[index] as? Int else {
+            return nil
+        }
 
+        let node = TreeNode(val)
+
+        let leftIndex = 2 * index + 1
+        if leftIndex > arr.count - 1 {
+            node.left = nil
+        } else {
+            node.left = array2Tree(arr, leftIndex)
+        }
+
+        let rightIndex = 2 * index + 2
+        if rightIndex > arr.count - 1 {
+            node.right = nil
+        } else {
+            node.right = array2Tree(arr, rightIndex)
+        }
+
+        return node
+    }
+
+    /// 先序遍历
+    func traverByPreOrder(_ tree: TreeNode?) {
+        if let t = tree {
+            print("tree node:", t.val)
+            traverByPreOrder(t.left)
+            traverByPreOrder(t.right)
+        }
+    }
 }
 
 extension LeetTree {
-    
+    func isBalanced(_ root: TreeNode?) -> Bool {
+        return false
+    }
 }

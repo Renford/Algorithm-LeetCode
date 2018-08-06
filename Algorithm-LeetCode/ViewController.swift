@@ -16,9 +16,11 @@ class ViewController: UIViewController {
 
 //        testStringAlgorithm()
         
-        testArrayAlgorithm()
+//        testArrayAlgorithm()
 
 //        testLinkListAlgorithm()
+
+        testTreeAlgorithm()
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +61,12 @@ class ViewController: UIViewController {
 //        linkList.testMergeKLists()
         
         linkList.testRemoveNthFromEnd()
+    }
+
+    func testTreeAlgorithm() {
+        let leetTree = LeetTree()
+
+        leetTree.testIsBalanced()
     }
 }
 

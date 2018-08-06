@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+extension LeetTree {
+    func testIsBalanced() {
+        let array = [
+                [1, 2, 2, 3, 3, nil, nil, 4, 4],
+                [3, 9, 20, nil, nil, 15, 7]
+            ]
+        array.forEach { (arr) in
+            print("arr:", arr)
+            let tree = array2Tree(arr, 0)
+            traverByPreOrder(tree)
+        }
+    }
+}
