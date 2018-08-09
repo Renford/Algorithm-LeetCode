@@ -202,4 +202,60 @@ class LeetArray: NSObject {
         
         return count
     }
+
+    /// 815. 公交路线
+    /// https://leetcode-cn.com/problems/bus-routes/description/
+    func numBusesToDestination(_ routes: [[Int]], _ S: Int, _ T: Int) -> Int {
+        if S == T {
+            return 0
+        }
+
+        var dic: [Int: [[Int]]] = [:]
+
+        for route in routes {
+            for dot in route {
+                if let arr = dic[dot] {
+                    var tempArray = arr
+                    tempArray.append(route)
+                    dic[dot] = tempArray
+                } else {
+                    let tempArray = [route]
+                    dic[dot] = tempArray
+                }
+            }
+        }
+
+        guard var currRoutes = dic[S] else {        // 当前要遍历的线路
+            return -1
+        }
+
+        var nextRoutes: [[Int]] = []                // 下一次要遍历的线路
+        var visitedRoutes: [[Int]] = currRoutes     // 已经便利过的线路
+        var count: Int = 1
+        while currRoutes.count > 0 {                // 对应nextRoutes
+            while currRoutes.count > 0 {            // currRoutes.popLast()
+                if let tempArray = currRoutes.popLast() {
+                    for site in tempArray {
+                        if site == T {
+                            return count
+                        } else {
+                            for route in dic[site]! {
+                                if !visitedRoutes.contains(route) {
+                                    visitedRoutes.append(route)
+                                    nextRoutes.append(route)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            count += 1
+            let tempRoutes = currRoutes
+            currRoutes = nextRoutes
+            nextRoutes = tempRoutes
+        }
+
+        return -1
+    }
 }

@@ -16,11 +16,11 @@ class ViewController: UIViewController {
 
 //        testStringAlgorithm()
         
-//        testArrayAlgorithm()
+        testArrayAlgorithm()
 
 //        testLinkListAlgorithm()
 
-        testTreeAlgorithm()
+//        testTreeAlgorithm()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         let str = LeetString()
 
 //        str.testLongestSubstring()
-//
+
 //        str.testLongestPalindrome()
 
         str.testCommonPrefix()
@@ -42,14 +42,16 @@ class ViewController: UIViewController {
         let leetArray = LeetArray()
         
 //        leetArray.testPerfectNumber()
-//
+
 //        leetArray.testMedianNumber()
         
 //        leetArray.testFindMin()
 
 //        leetArray.testLeastBricks()
         
-        leetArray.testIntersectionSizeTwo()
+//        leetArray.testIntersectionSizeTwo()
+
+        leetArray.testNumBusesToDestination()
 
     }
 

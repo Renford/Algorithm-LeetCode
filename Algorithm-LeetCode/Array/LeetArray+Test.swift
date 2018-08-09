@@ -80,6 +80,40 @@ extension LeetArray {
         ]
         let result = intersectionSizeTwo(arr)
         print("交集大小：", result)
-        print("========交集大小begin=========\n")
+        print("========交集大小end=========\n")
+    }
+
+    func testNumBusesToDestination() {
+        var tempArray: [Int] = []
+        for i in 0 ... 9999 {
+            tempArray.append(i)
+        }
+        print("========公交线路end=========\n", Date().timeIntervalSince1970)
+        let array = [
+//            [
+//                [1, 2, 7],
+//                [3, 6, 7]
+//            ],
+//            [
+//                [0,1,6,16,22,23],
+//                [14,15,24,32],
+//                [4,10,12,20,24,28,33],
+//                [1,10,11,19,27,33],
+//                [11,23,25,28],
+//                [15,20,21,23,29],
+//                [29]
+//            ],
+            [
+                tempArray
+            ]
+        ]
+
+        array.forEach { (arr) in
+            let result = numBusesToDestination(arr, 0, 9999)
+            print("公交线路", arr)
+            print("最小路劲", result)
+        }
+
+        print("========公交线路end=========\n", Date().timeIntervalSince1970)
     }
 }
