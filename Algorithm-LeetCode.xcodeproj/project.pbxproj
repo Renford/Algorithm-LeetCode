@@ -17,6 +17,12 @@
 		5781E7532113328F0020AA2B /* LeetArray+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781E7522113328F0020AA2B /* LeetArray+Test.swift */; };
 		5781E756211337660020AA2B /* LeetTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781E755211337660020AA2B /* LeetTree.swift */; };
 		5781E758211337780020AA2B /* LeetTree+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781E757211337780020AA2B /* LeetTree+Test.swift */; };
+		5781E75F211E54DA0020AA2B /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781E75E211E54DA0020AA2B /* MainTableViewController.swift */; };
+		5781E761211E56060020AA2B /* LTArrayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781E760211E56060020AA2B /* LTArrayTableViewController.swift */; };
+		5781E763211E56540020AA2B /* LTLinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781E762211E56540020AA2B /* LTLinkTableViewController.swift */; };
+		5781E765211E56620020AA2B /* LTStringTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781E764211E56620020AA2B /* LTStringTableViewController.swift */; };
+		5781E767211E56750020AA2B /* LTTreeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781E766211E56750020AA2B /* LTTreeTableViewController.swift */; };
+		5781E769211E590D0020AA2B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781E768211E590D0020AA2B /* BaseTableViewController.swift */; };
 		57B7B12F2113291F00B63DB8 /* LeetArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7B12E2113291F00B63DB8 /* LeetArray.swift */; };
 		8F016B8C210FE67300E93025 /* LeetLinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F016B8B210FE67300E93025 /* LeetLinkList.swift */; };
 		8F959126211D15A700B8D772 /* LeetCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F959125211D15A700B8D772 /* LeetCache.swift */; };
@@ -37,6 +43,12 @@
 		5781E7522113328F0020AA2B /* LeetArray+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetArray+Test.swift"; sourceTree = "<group>"; };
 		5781E755211337660020AA2B /* LeetTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetTree.swift; sourceTree = "<group>"; };
 		5781E757211337780020AA2B /* LeetTree+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetTree+Test.swift"; sourceTree = "<group>"; };
+		5781E75E211E54DA0020AA2B /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		5781E760211E56060020AA2B /* LTArrayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTArrayTableViewController.swift; sourceTree = "<group>"; };
+		5781E762211E56540020AA2B /* LTLinkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLinkTableViewController.swift; sourceTree = "<group>"; };
+		5781E764211E56620020AA2B /* LTStringTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTStringTableViewController.swift; sourceTree = "<group>"; };
+		5781E766211E56750020AA2B /* LTTreeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTTreeTableViewController.swift; sourceTree = "<group>"; };
+		5781E768211E590D0020AA2B /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		57B7B12E2113291F00B63DB8 /* LeetArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetArray.swift; sourceTree = "<group>"; };
 		8F016B8B210FE67300E93025 /* LeetLinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetLinkList.swift; sourceTree = "<group>"; };
 		8F959125211D15A700B8D772 /* LeetCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCache.swift; sourceTree = "<group>"; };
@@ -76,6 +88,8 @@
 			children = (
 				5742A5C2210959D800803BAC /* AppDelegate.swift */,
 				5742A5C4210959D800803BAC /* ViewController.swift */,
+				5781E75E211E54DA0020AA2B /* MainTableViewController.swift */,
+				5781E768211E590D0020AA2B /* BaseTableViewController.swift */,
 				575D2AED210A9F800011F198 /* String */,
 				57B7B12D2113290A00B63DB8 /* Array */,
 				575D2AEE210A9F800011F198 /* LinkList */,
@@ -94,6 +108,7 @@
 			children = (
 				575D2AEF210A9FB00011F198 /* LeetString.swift */,
 				574D4D99210E96B800C323B3 /* LeetString+Test.swift */,
+				5781E764211E56620020AA2B /* LTStringTableViewController.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -103,6 +118,7 @@
 			children = (
 				8F016B8B210FE67300E93025 /* LeetLinkList.swift */,
 				8FB837D7211289B500A3C73A /* LeetLinkList+Test.swift */,
+				5781E762211E56540020AA2B /* LTLinkTableViewController.swift */,
 			);
 			path = LinkList;
 			sourceTree = "<group>";
@@ -112,6 +128,7 @@
 			children = (
 				5781E755211337660020AA2B /* LeetTree.swift */,
 				5781E757211337780020AA2B /* LeetTree+Test.swift */,
+				5781E766211E56750020AA2B /* LTTreeTableViewController.swift */,
 			);
 			path = Tree;
 			sourceTree = "<group>";
@@ -121,6 +138,7 @@
 			children = (
 				57B7B12E2113291F00B63DB8 /* LeetArray.swift */,
 				5781E7522113328F0020AA2B /* LeetArray+Test.swift */,
+				5781E760211E56060020AA2B /* LTArrayTableViewController.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -206,7 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5781E75F211E54DA0020AA2B /* MainTableViewController.swift in Sources */,
 				57B7B12F2113291F00B63DB8 /* LeetArray.swift in Sources */,
+				5781E761211E56060020AA2B /* LTArrayTableViewController.swift in Sources */,
 				574D4D9A210E96B800C323B3 /* LeetString+Test.swift in Sources */,
 				8FB837D8211289B500A3C73A /* LeetLinkList+Test.swift in Sources */,
 				5781E7532113328F0020AA2B /* LeetArray+Test.swift in Sources */,
@@ -215,8 +235,12 @@
 				575D2AF0210A9FB00011F198 /* LeetString.swift in Sources */,
 				8F959126211D15A700B8D772 /* LeetCache.swift in Sources */,
 				5781E756211337660020AA2B /* LeetTree.swift in Sources */,
+				5781E767211E56750020AA2B /* LTTreeTableViewController.swift in Sources */,
+				5781E769211E590D0020AA2B /* BaseTableViewController.swift in Sources */,
 				5781E758211337780020AA2B /* LeetTree+Test.swift in Sources */,
 				8F016B8C210FE67300E93025 /* LeetLinkList.swift in Sources */,
+				5781E763211E56540020AA2B /* LTLinkTableViewController.swift in Sources */,
+				5781E765211E56620020AA2B /* LTStringTableViewController.swift in Sources */,
 				5742A5C3210959D800803BAC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

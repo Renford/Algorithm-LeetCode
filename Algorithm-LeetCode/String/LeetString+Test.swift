@@ -12,9 +12,19 @@ extension LeetString {
     func testLongestSubstring() {
         print("\n=========最大无重复子串 111=========\n")
 
-        let _ = lengthOfLongestSubstring("abcfdefg")
+        let arr = [
+            "abcsdf",
+            "bb",
+            "abccds"
+        ]
+        
+        arr.forEach { (str) in
+            let result = lengthOfLongestSubstring(str)
+            print("\(str) substring : ", result)
+        }
+        
 
-        print("\n=========最大无重复子串 111=========\n")
+        print("\n=========最大无重复子串 222=========\n")
     }
 
     // test 5

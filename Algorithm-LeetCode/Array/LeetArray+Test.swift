@@ -17,7 +17,7 @@ extension LeetArray {
         }
     }
     
-    func testMedianNumber() {
+    @objc func testMedianNumber() {
         let array = [
             [[], []],
             [[1], []],
