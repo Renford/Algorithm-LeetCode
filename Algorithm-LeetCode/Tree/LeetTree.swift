@@ -55,7 +55,9 @@ class LeetTree: NSObject {
     }
 }
 
+// MARK: - 110.平衡二叉树
 extension LeetTree {
+    /// https://leetcode-cn.com/problems/balanced-binary-tree/description/
     func isBalanced(_ root: TreeNode?) -> Bool {
         if let node = root {
             let leftHeight = getHeight(node.left)
@@ -70,6 +72,44 @@ extension LeetTree {
     }
 }
 
+// MARK: - 103. 二叉树的锯齿形层次遍历
+extension LeetTree {
+    /// https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/description/
+    func zigzagLevelOrder(_ root: TreeNode?) -> [[Int]] {
+        var result: [[Int]] = []
+
+        var nodeQueue: [TreeNode?] = []
+        if let node = root {
+            nodeQueue.append(node)
+        }
+
+        while !nodeQueue.isEmpty {
+            var tempArray: [Int] = []
+            var count = nodeQueue.count
+
+            while count > 0 {
+                if let first = nodeQueue.removeFirst() {
+                    tempArray.append(first.val)
+                    count -= 1
+
+                    if let left = first.left {
+                        nodeQueue.append(left)
+                    }
+
+                    if let right = first.right {
+                        nodeQueue.append(right)
+                    }
+                }
+            }
+
+            result.append(tempArray)
+        }
+
+        return result
+    }
+}
+
+// MARK: - private method
 extension LeetTree {
     fileprivate func getHeight(_ root: TreeNode?) -> Int {
         var count = 0
