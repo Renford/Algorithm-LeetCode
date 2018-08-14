@@ -86,21 +86,29 @@ extension LeetTree {
         while !nodeQueue.isEmpty {
             var tempArray: [Int] = []
             var count = nodeQueue.count
+            var nextQueue: [TreeNode?] = []
 
             while count > 0 {
-                if let first = nodeQueue.removeFirst() {
-                    tempArray.append(first.val)
-                    count -= 1
+                if let node = nodeQueue.removeFirst() {
 
-                    if let left = first.left {
-                        nodeQueue.append(left)
+                    if result.count % 2 == 0 {
+                        tempArray.append(node.val)
+                    } else {
+                        tempArray.insert(node.val, at: 0)
                     }
 
-                    if let right = first.right {
-                        nodeQueue.append(right)
+                    count -= 1
+
+                    if let left = node.left {
+                        nextQueue.append(left)
+                    }
+
+                    if let right = node.right {
+                        nextQueue.append(right)
                     }
                 }
             }
+            nodeQueue = nextQueue
 
             result.append(tempArray)
         }

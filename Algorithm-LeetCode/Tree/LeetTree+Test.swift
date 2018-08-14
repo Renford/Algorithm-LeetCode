@@ -29,8 +29,9 @@ extension LeetTree {
     func testZigzagLevelOrder() {
         print("\n=========二叉树层次遍历 begin=========\n")
         let array = [
-            [1, 2, 2, 3, 3, nil, nil, 4, 4],
-            [3, 9, 20, nil, nil, 15, 7]
+            [1, 2, 3, nil, nil, 4, 5, nil, nil, nil, nil, 6, 7],
+            [3, 9, 20, nil, nil, 15, 7],
+            [1, 2, 3, 4, nil, nil, 5]
         ]
         array.forEach { (arr) in
             print("arr:", arr)
