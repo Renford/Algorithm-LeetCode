@@ -17,7 +17,8 @@ class LTArrayTableViewController: BaseTableViewController {
         "4. 两个排序数组的中位数",
         "153. 寻找旋转排序数组@objc @objc @objc (如[4,5,6,7,0,1,2,3])中的最小值",
         "554. 砖墙",
-        "757. 设置交集大小至少为2"
+        "757. 设置交集大小至少为2",
+        "815. 公交路线"
     ]
     
     override func viewDidLoad() {
@@ -34,8 +35,6 @@ class LTArrayTableViewController: BaseTableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
 
     // MARK: - Table view data source
     
@@ -69,6 +68,8 @@ class LTArrayTableViewController: BaseTableViewController {
             leetArray.testLeastBricks()
         } else if indexPath.row == 4 {
             leetArray.testIntersectionSizeTwo()
+        } else if indexPath.row == 5 {
+            leetArray.testNumBusesToDestination()
         }
     }
 
