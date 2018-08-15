@@ -10,6 +10,12 @@ import Foundation
 
 extension LeetNumber {
     func testAddDigits() {
-        
+        print("\n=========各位相加 begin=========\n")
+        let arr = [0, 10, 19]
+        arr.forEach { (value) in
+            let result = addDigits(value)
+            print("num: \(value), add result: \(result)")
+        }
+        print("\n=========各位相加 end=========\n")
     }
 }
