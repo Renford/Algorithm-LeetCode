@@ -27,6 +27,9 @@
 		8F016B8C210FE67300E93025 /* LeetLinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F016B8B210FE67300E93025 /* LeetLinkList.swift */; };
 		8F959126211D15A700B8D772 /* LeetCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F959125211D15A700B8D772 /* LeetCache.swift */; };
 		8F959128211D15BC00B8D772 /* LeetCache+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F959127211D15BC00B8D772 /* LeetCache+Test.swift */; };
+		8FA077E22123B3B8000E807D /* LeetNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA077E12123B3B8000E807D /* LeetNumber.swift */; };
+		8FA077E42123B438000E807D /* LeetNumber+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA077E32123B438000E807D /* LeetNumber+Test.swift */; };
+		8FA077E62123B462000E807D /* LTNumberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA077E52123B462000E807D /* LTNumberTableViewController.swift */; };
 		8FB837D8211289B500A3C73A /* LeetLinkList+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB837D7211289B500A3C73A /* LeetLinkList+Test.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,9 @@
 		8F016B8B210FE67300E93025 /* LeetLinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetLinkList.swift; sourceTree = "<group>"; };
 		8F959125211D15A700B8D772 /* LeetCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCache.swift; sourceTree = "<group>"; };
 		8F959127211D15BC00B8D772 /* LeetCache+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetCache+Test.swift"; sourceTree = "<group>"; };
+		8FA077E12123B3B8000E807D /* LeetNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetNumber.swift; sourceTree = "<group>"; };
+		8FA077E32123B438000E807D /* LeetNumber+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetNumber+Test.swift"; sourceTree = "<group>"; };
+		8FA077E52123B462000E807D /* LTNumberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTNumberTableViewController.swift; sourceTree = "<group>"; };
 		8FB837D7211289B500A3C73A /* LeetLinkList+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetLinkList+Test.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +96,7 @@
 				5742A5C4210959D800803BAC /* ViewController.swift */,
 				5781E75E211E54DA0020AA2B /* MainTableViewController.swift */,
 				5781E768211E590D0020AA2B /* BaseTableViewController.swift */,
+				8FA077E02123B3A4000E807D /* Number */,
 				575D2AED210A9F800011F198 /* String */,
 				57B7B12D2113290A00B63DB8 /* Array */,
 				575D2AEE210A9F800011F198 /* LinkList */,
@@ -152,6 +159,16 @@
 			name = Cache;
 			path = "Algorithm-LeetCode/Cache";
 			sourceTree = SOURCE_ROOT;
+		};
+		8FA077E02123B3A4000E807D /* Number */ = {
+			isa = PBXGroup;
+			children = (
+				8FA077E12123B3B8000E807D /* LeetNumber.swift */,
+				8FA077E32123B438000E807D /* LeetNumber+Test.swift */,
+				8FA077E52123B462000E807D /* LTNumberTableViewController.swift */,
+			);
+			path = Number;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -234,11 +251,14 @@
 				5742A5C5210959D800803BAC /* ViewController.swift in Sources */,
 				575D2AF0210A9FB00011F198 /* LeetString.swift in Sources */,
 				8F959126211D15A700B8D772 /* LeetCache.swift in Sources */,
+				8FA077E42123B438000E807D /* LeetNumber+Test.swift in Sources */,
 				5781E756211337660020AA2B /* LeetTree.swift in Sources */,
 				5781E767211E56750020AA2B /* LTTreeTableViewController.swift in Sources */,
+				8FA077E22123B3B8000E807D /* LeetNumber.swift in Sources */,
 				5781E769211E590D0020AA2B /* BaseTableViewController.swift in Sources */,
 				5781E758211337780020AA2B /* LeetTree+Test.swift in Sources */,
 				8F016B8C210FE67300E93025 /* LeetLinkList.swift in Sources */,
+				8FA077E62123B462000E807D /* LTNumberTableViewController.swift in Sources */,
 				5781E763211E56540020AA2B /* LTLinkTableViewController.swift in Sources */,
 				5781E765211E56620020AA2B /* LTStringTableViewController.swift in Sources */,
 				5742A5C3210959D800803BAC /* AppDelegate.swift in Sources */,

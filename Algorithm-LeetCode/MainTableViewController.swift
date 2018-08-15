@@ -10,11 +10,10 @@ import UIKit
 
 class MainTableViewController: BaseTableViewController {
     
-    var dataArray: [String] = ["字符串", "数组", "链表", "树"]
+    var dataArray: [String] = ["数字", "字符串", "数组", "链表", "树"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,12 +45,14 @@ class MainTableViewController: BaseTableViewController {
         
         var vc: UIViewController?
         if indexPath.row == 0 {
-            vc = LTStringTableViewController()
+            vc = LTNumberTableViewController()
         } else if indexPath.row == 1 {
-            vc = LTArrayTableViewController()
+            vc = LTStringTableViewController()
         } else if indexPath.row == 2 {
-            vc = LTLinkTableViewController()
+            vc = LTArrayTableViewController()
         } else if indexPath.row == 3 {
+            vc = LTLinkTableViewController()
+        } else if indexPath.row == 4 {
             vc = LTTreeTableViewController()
         }
         
@@ -60,5 +61,5 @@ class MainTableViewController: BaseTableViewController {
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
-    
+
 }
