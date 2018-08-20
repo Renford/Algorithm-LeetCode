@@ -11,6 +11,7 @@ import UIKit
 class LTNumberTableViewController: BaseTableViewController {
 
     let algorithms = [
+        "29. 两数相除",
         "258. 各位相加"
     ]
 
@@ -49,8 +50,9 @@ class LTNumberTableViewController: BaseTableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
 
         if indexPath.row == 0 {
-            leetNumber.testAddDigits()
+            leetNumber.testDivide()
         } else if indexPath.row == 1 {
+            leetNumber.testAddDigits()
         } else if indexPath.row == 2 {
         }
     }

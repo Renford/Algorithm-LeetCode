@@ -13,9 +13,38 @@ class LeetNumber: NSObject {
 
 }
 
-// MARK: - 258. 各位相加
-// https://leetcode-cn.com/problems/add-digits/description/
+// MARK: - 29. 两数相除
 extension LeetNumber {
+    /// https://leetcode-cn.com/problems/divide-two-integers/description/
+    /// https://blog.csdn.net/Windows_Defender/article/details/80445969
+    /// 移位 << >>
+    func divide(_ dividend: Int, _ divisor: Int) -> Int {
+        if divisor == 0 || (dividend == Int32.min && divisor == -1) {
+            return Int(Int32.max)
+        } else if divisor == 1 {
+            return dividend
+        } else if divisor == -1 {
+            return -dividend
+        }
+
+        var tempValue = 0
+        var result = 0
+        while abs(dividend) - tempValue >= abs(divisor) {
+            tempValue += abs(divisor)
+            result += 1
+        }
+
+        if (dividend > 0 && divisor < 0) || (dividend < 0 && divisor > 0) {
+            result = -result
+        }
+
+        return result
+    }
+}
+
+// MARK: - 258. 各位相加
+extension LeetNumber {
+    /// https://leetcode-cn.com/problems/add-digits/description/
     func addDigits(_ num: Int) -> Int {
         var result = 0
 

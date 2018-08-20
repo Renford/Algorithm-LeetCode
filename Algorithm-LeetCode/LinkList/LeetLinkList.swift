@@ -43,8 +43,8 @@ class LeetLinkList: NSObject {
 
 }
 
+// MARK: - 21. 合并两个有序链表
 extension LeetLinkList {
-    /// 21. 合并两个有序链表
     /// https://leetcode-cn.com/problems/merge-two-sorted-lists/description/
     func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         
@@ -65,8 +65,10 @@ extension LeetLinkList {
         
         return node
     }
+}
 
-    /// 23. 合并K个有序链表
+// MARK: - 23. 合并K个有序链表
+extension LeetLinkList {
     /// https://leetcode-cn.com/problems/merge-k-sorted-lists/description/
     func mergeKLists(_ lists: [ListNode?]) -> ListNode? {
 
@@ -106,32 +108,40 @@ extension LeetLinkList {
 
         return head.next
     }
-    
-    /// 19. 删除链表的倒数第N个节点
+}
+
+// MARK: - 19. 删除链表的倒数第N个节点
+extension LeetLinkList {
     /// https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/description/
     func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
         let headNode = ListNode(0)
         headNode.next = head
-        
+
         var firstNode: ListNode? = headNode
         for _ in 1 ... n {
             firstNode = firstNode?.next
-            
+
             if firstNode == nil {
                 break
             }
         }
-        
+
         var secondNode: ListNode? = nil
         while firstNode != nil {
             firstNode = firstNode?.next
             secondNode = secondNode == nil ? headNode : secondNode?.next
         }
-        
+
         if let node = secondNode {
             node.next = node.next?.next
         }
-        
+
         return headNode.next
+    }
+}
+
+extension LeetLinkList {
+    func hasCycle(_ head: ListNode?) -> Bool {
+        return false
     }
 }

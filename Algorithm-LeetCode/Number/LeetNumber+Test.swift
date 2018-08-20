@@ -9,6 +9,21 @@
 import Foundation
 
 extension LeetNumber {
+    func testDivide() {
+        print("\n=========两数相除 begin=========\n")
+        let arr = [
+            [10, 1],
+            [10, 0],
+            [-2147483648, -1],
+            [50, 3]
+        ]
+        arr.forEach { (value) in
+            let result = divide(value[0], value[1])
+            print("num: \(value), divide result: \(result)")
+        }
+        print("\n=========两数相除 end=========\n")
+    }
+
     func testAddDigits() {
         print("\n=========各位相加 begin=========\n")
         let arr = [0, 10, 19]

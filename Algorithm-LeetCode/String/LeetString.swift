@@ -10,7 +10,14 @@ import UIKit
 
 class LeetString: NSObject {
 
-    /// 3. 无重复字符的最长子串
+
+
+
+}
+
+/// 3. 无重复字符的最长子串
+extension LeetString {
+    /// https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/description/
     func lengthOfLongestSubstring(_ s: String) -> Int {
         var length = 0
 
@@ -28,8 +35,11 @@ class LeetString: NSObject {
 
         return length
     }
+}
 
-    /// 5. 最长回文子串（如aa、abcba、abba）
+/// 5. 最长回文子串（如aa、abcba、abba）
+extension LeetString {
+    /// https://leetcode-cn.com/problems/longest-palindromic-substring/description/
     func longestPalindrome(_ s: String) -> String {
         if s.count == 0 {
             return s
@@ -73,8 +83,10 @@ class LeetString: NSObject {
 
         return result
     }
+}
 
-    /// 14. 最长公共前缀
+/// 14. 最长公共前缀
+extension LeetString {
     /// https://leetcode-cn.com/problems/longest-common-prefix/description/
     func longestCommonPrefix(_ strs: [String]) -> String {
         if strs.count == 0 {
@@ -95,15 +107,17 @@ class LeetString: NSObject {
 
         return result
     }
-    
-    /// 10. 正则表达式匹配
+}
+
+/// 10. 正则表达式匹配
+extension LeetString {
     /// https://leetcode-cn.com/problems/regular-expression-matching/description/
     func isMatch(_ s: String, _ p: String) -> Bool {
-        
+
         p.enumerated().forEach { (index, char) in
-            
+
         }
-        
+
         return false
     }
 }
