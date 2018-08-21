@@ -16,8 +16,6 @@ class LeetNumber: NSObject {
 // MARK: - 29. 两数相除
 extension LeetNumber {
     /// https://leetcode-cn.com/problems/divide-two-integers/description/
-    /// https://blog.csdn.net/Windows_Defender/article/details/80445969
-    /// 移位 << >>
     func divide(_ dividend: Int, _ divisor: Int) -> Int {
         if divisor == 0 || (dividend == Int32.min && divisor == -1) {
             return Int(Int32.max)
@@ -27,11 +25,19 @@ extension LeetNumber {
             return -dividend
         }
 
-        var tempValue = 0
         var result = 0
-        while abs(dividend) - tempValue >= abs(divisor) {
-            tempValue += abs(divisor)
-            result += 1
+
+        var absDividend = abs(dividend)
+        let absDivisor = abs(divisor)
+        while absDividend >= absDivisor {
+            var tempDiv = absDivisor
+            var value = 1
+            while absDividend >= (tempDiv << 1) {
+                tempDiv <<= 1
+                value <<= 1
+            }
+            result += value
+            absDividend -= tempDiv
         }
 
         if (dividend > 0 && divisor < 0) || (dividend < 0 && divisor > 0) {
