@@ -140,6 +140,30 @@ extension LeetLinkList {
     }
 }
 
+// MARK: - 83. 删除排序链表中的重复元素
+extension LeetLinkList {
+    /// https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/description/
+    func deleteDuplicates(_ head: ListNode?) -> ListNode? {
+        if let tempHead = head {
+            var value = tempHead.val
+            var prevNode = tempHead
+            var node = tempHead.next
+            while let tempNode = node {
+                if tempNode.val == value {
+                    node = tempNode.next
+                    prevNode.next = tempNode.next
+                } else {
+                    value = tempNode.val
+                    prevNode = tempNode
+                    node = tempNode.next
+                }
+            }
+        }
+
+        return head
+    }
+}
+
 extension LeetLinkList {
     func hasCycle(_ head: ListNode?) -> Bool {
         return false

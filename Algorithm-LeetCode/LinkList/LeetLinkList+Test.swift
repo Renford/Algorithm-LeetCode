@@ -80,4 +80,26 @@ extension LeetLinkList {
         
         print("\n=========删除倒数第n个节点 end =========\n")
     }
+
+    func testDeleteDuplicates() {
+        print("\n=========删除重复节点 begin =========\n")
+
+        let array = [
+            [1, 2, 3, 4, 5],
+            [1, 2, 2, 4, 4],
+            [1, 1, 1, 1, 1],
+            []
+        ]
+
+        array.forEach { (arr) in
+            let list = array2LinkList(arr)
+            print("delete before：\n")
+            travlLinkList(list)
+            let result = deleteDuplicates(list)
+            print("delete after：\n")
+            travlLinkList(result)
+        }
+
+        print("\n=========删除重复节点 end =========\n")
+    }
 }
