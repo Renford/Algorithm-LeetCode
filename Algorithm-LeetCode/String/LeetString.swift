@@ -15,7 +15,7 @@ class LeetString: NSObject {
 
 }
 
-/// 3. 无重复字符的最长子串
+// MARK: - 3. 无重复字符的最长子串
 extension LeetString {
     /// https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/description/
     func lengthOfLongestSubstring(_ s: String) -> Int {
@@ -37,7 +37,7 @@ extension LeetString {
     }
 }
 
-/// 5. 最长回文子串（如aa、abcba、abba）
+// MARK: - 5. 最长回文子串（如aa、abcba、abba）
 extension LeetString {
     /// https://leetcode-cn.com/problems/longest-palindromic-substring/description/
     func longestPalindrome(_ s: String) -> String {
@@ -85,7 +85,7 @@ extension LeetString {
     }
 }
 
-/// 14. 最长公共前缀
+// MARK: - 14. 最长公共前缀
 extension LeetString {
     /// https://leetcode-cn.com/problems/longest-common-prefix/description/
     func longestCommonPrefix(_ strs: [String]) -> String {
@@ -109,7 +109,7 @@ extension LeetString {
     }
 }
 
-/// 10. 正则表达式匹配
+// MARK: - 10. 正则表达式匹配
 extension LeetString {
     /// https://leetcode-cn.com/problems/regular-expression-matching/description/
     func isMatch(_ s: String, _ p: String) -> Bool {
@@ -119,6 +119,33 @@ extension LeetString {
         }
 
         return false
+    }
+}
+
+// MARK: - 389. 找不同
+extension LeetString {
+    /// https://leetcode-cn.com/problems/find-the-difference/description/
+    func findTheDifference(_ s: String, _ t: String) -> Character {
+        var tempDic: [Character: Int] = [:]
+        t.forEach { (char) in
+            if let count = tempDic[char] {
+                tempDic[char] = count + 1
+            } else {
+                tempDic[char] = 1
+            }
+        }
+
+        s.forEach { (char) in
+            if let count = tempDic[char] {
+                if count == 1 {
+                    tempDic.removeValue(forKey: char)
+                } else {
+                    tempDic[char] = count - 1
+                }
+            }
+        }
+
+        return tempDic.keys.first ?? Character(" ")
     }
 }
 

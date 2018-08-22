@@ -40,7 +40,7 @@ extension LeetString {
             "abcba",
             "abccba",
             "asdffasdfasdfasdf",
-            ]
+        ]
 
         print("\n=========最大回文 111=========\n")
         array.forEach { (str) in
@@ -59,7 +59,7 @@ extension LeetString {
             ["asdf", "a", "aaaa"],
             ["dfgh", "aaaa", "degc"],
             ["asdfg", "asdfg", "asdfg"],
-            ]
+        ]
 
         print("\n=========最大前缀 111=========\n")
         array.forEach { (str) in
@@ -67,5 +67,21 @@ extension LeetString {
             print("\(str) common prefix: \(result)")
         }
         print("\n=========最大前缀 222=========\n")
+    }
+
+    /// test 389
+    func testFindTheDifference() {
+        let array = [
+            ["", ""],
+            ["abcd", "abcde"],
+            ["abfcd", "dbcaff"]
+        ]
+
+        print("\n=========找不同 111=========\n")
+        array.forEach { (arr) in
+            let result = findTheDifference(arr[0], arr[1])
+            print("\(arr) defference: \(result)")
+        }
+        print("\n=========找不同 222=========\n")
     }
 }
