@@ -18,7 +18,8 @@ class LTArrayTableViewController: BaseTableViewController {
         "153. 寻找旋转排序数组@objc @objc @objc (如[4,5,6,7,0,1,2,3])中的最小值",
         "554. 砖墙",
         "757. 设置交集大小至少为2",
-        "815. 公交路线"
+        "815. 公交路线",
+        "322. 零钱兑换"
     ]
     
     override func viewDidLoad() {
@@ -70,6 +71,8 @@ class LTArrayTableViewController: BaseTableViewController {
             leetArray.testIntersectionSizeTwo()
         } else if indexPath.row == 5 {
             leetArray.testNumBusesToDestination()
+        } else if indexPath.row == 6 {
+            leetArray.testCoinChange()
         }
     }
 

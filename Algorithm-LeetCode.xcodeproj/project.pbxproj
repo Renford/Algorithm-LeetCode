@@ -30,6 +30,9 @@
 		8FA077E22123B3B8000E807D /* LeetNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA077E12123B3B8000E807D /* LeetNumber.swift */; };
 		8FA077E42123B438000E807D /* LeetNumber+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA077E32123B438000E807D /* LeetNumber+Test.swift */; };
 		8FA077E62123B462000E807D /* LTNumberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA077E52123B462000E807D /* LTNumberTableViewController.swift */; };
+		8FAF8F1A212F916F001157EB /* DpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAF8F19212F916F001157EB /* DpTableViewController.swift */; };
+		8FAF8F1C212F9198001157EB /* LeetDynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAF8F1B212F9198001157EB /* LeetDynamic.swift */; };
+		8FAF8F1E212F91B0001157EB /* LeetDynamic+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAF8F1D212F91B0001157EB /* LeetDynamic+Test.swift */; };
 		8FB837D8211289B500A3C73A /* LeetLinkList+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB837D7211289B500A3C73A /* LeetLinkList+Test.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,9 @@
 		8FA077E12123B3B8000E807D /* LeetNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetNumber.swift; sourceTree = "<group>"; };
 		8FA077E32123B438000E807D /* LeetNumber+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetNumber+Test.swift"; sourceTree = "<group>"; };
 		8FA077E52123B462000E807D /* LTNumberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTNumberTableViewController.swift; sourceTree = "<group>"; };
+		8FAF8F19212F916F001157EB /* DpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DpTableViewController.swift; sourceTree = "<group>"; };
+		8FAF8F1B212F9198001157EB /* LeetDynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetDynamic.swift; sourceTree = "<group>"; };
+		8FAF8F1D212F91B0001157EB /* LeetDynamic+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetDynamic+Test.swift"; sourceTree = "<group>"; };
 		8FB837D7211289B500A3C73A /* LeetLinkList+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetLinkList+Test.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +108,7 @@
 				575D2AEE210A9F800011F198 /* LinkList */,
 				5781E754211337570020AA2B /* Tree */,
 				8F959124211D157A00B8D772 /* Cache */,
+				8FAF8F18212F9157001157EB /* DynamicProgramming */,
 				5742A5C6210959D800803BAC /* Main.storyboard */,
 				5742A5C9210959D900803BAC /* Assets.xcassets */,
 				5742A5CB210959D900803BAC /* LaunchScreen.storyboard */,
@@ -169,6 +176,17 @@
 			);
 			path = Number;
 			sourceTree = "<group>";
+		};
+		8FAF8F18212F9157001157EB /* DynamicProgramming */ = {
+			isa = PBXGroup;
+			children = (
+				8FAF8F19212F916F001157EB /* DpTableViewController.swift */,
+				8FAF8F1B212F9198001157EB /* LeetDynamic.swift */,
+				8FAF8F1D212F91B0001157EB /* LeetDynamic+Test.swift */,
+			);
+			name = DynamicProgramming;
+			path = "Algorithm-LeetCode/DynamicProgramming";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -242,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5781E75F211E54DA0020AA2B /* MainTableViewController.swift in Sources */,
+				8FAF8F1A212F916F001157EB /* DpTableViewController.swift in Sources */,
 				57B7B12F2113291F00B63DB8 /* LeetArray.swift in Sources */,
 				5781E761211E56060020AA2B /* LTArrayTableViewController.swift in Sources */,
 				574D4D9A210E96B800C323B3 /* LeetString+Test.swift in Sources */,
@@ -259,6 +278,8 @@
 				5781E758211337780020AA2B /* LeetTree+Test.swift in Sources */,
 				8F016B8C210FE67300E93025 /* LeetLinkList.swift in Sources */,
 				8FA077E62123B462000E807D /* LTNumberTableViewController.swift in Sources */,
+				8FAF8F1E212F91B0001157EB /* LeetDynamic+Test.swift in Sources */,
+				8FAF8F1C212F9198001157EB /* LeetDynamic.swift in Sources */,
 				5781E763211E56540020AA2B /* LTLinkTableViewController.swift in Sources */,
 				5781E765211E56620020AA2B /* LTStringTableViewController.swift in Sources */,
 				5742A5C3210959D800803BAC /* AppDelegate.swift in Sources */,
