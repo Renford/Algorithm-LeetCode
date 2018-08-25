@@ -10,7 +10,10 @@ import UIKit
 
 class LeetArray: NSObject {
     
-    /// 507. 完美数
+}
+
+// MARK: - 507. 完美数
+extension LeetArray {
     /// https://leetcode-cn.com/problems/perfect-number/description/
     func checkPerfectNumber(_ num: Int) -> Bool {
         if num <= 1 {
@@ -38,7 +41,11 @@ class LeetArray: NSObject {
         return tempValue == num
     }
     
-    /// 4. 两个排序数组的中位数
+}
+
+// MARK: - 4. 两个排序数组的中位数
+extension LeetArray {
+    
     /// https://leetcode-cn.com/problems/median-of-two-sorted-arrays/description/
     func findMedianSortedArrays(_ nums1: [Int], _ nums2: [Int]) -> Double {
         
@@ -91,7 +98,12 @@ class LeetArray: NSObject {
         return result
     }
     
-    /// 153. 寻找旋转排序数组(如[4,5,6,7,0,1,2,3])中的最小值
+
+}
+
+// MARK: - 153. 寻找旋转排序数组(如[4,5,6,7,0,1,2,3])中的最小值
+extension LeetArray {
+
     /// https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/description/
     func findMin(_ nums: [Int]) -> Int {
         if nums.count == 0 {
@@ -132,8 +144,10 @@ class LeetArray: NSObject {
         
         return minValue
     }
+}
 
-    /// 554. 砖墙
+// MARK: - 554. 砖墙
+extension LeetArray {
     /// https://leetcode-cn.com/problems/brick-wall/description/
     func leastBricks(_ wall: [[Int]]) -> Int {
         var tempDic: [Int: Int] = [:]
@@ -150,18 +164,22 @@ class LeetArray: NSObject {
                 }
             })
         }
-
+        
         var maxCount = 0
         tempDic.values.forEach { (cnt) in
             if maxCount < cnt {
                 maxCount = cnt
             }
         }
-
+        
         return wall.count - maxCount
     }
+}
+
+// MARK: - 757. 设置交集大小至少为2
+extension LeetArray {
     
-    /// 757. 设置交集大小至少为2
+    ///
     /// https://leetcode-cn.com/problems/set-intersection-size-at-least-two/description/
     func intersectionSizeTwo(_ intervals: [[Int]]) -> Int {
         
@@ -187,7 +205,7 @@ class LeetArray: NSObject {
         var count: Int = 0
         var value1: Int = -1
         var value2: Int = -1
-     
+        
         array.forEach { (arr) in
             if arr[0] > value2 {
                 count += 2
@@ -202,16 +220,19 @@ class LeetArray: NSObject {
         
         return count
     }
+}
 
-    /// 815. 公交路线
+// MARK: - 815. 公交路线
+extension LeetArray {
+    
     /// https://leetcode-cn.com/problems/bus-routes/description/
     func numBusesToDestination(_ routes: [[Int]], _ S: Int, _ T: Int) -> Int {
         if S == T {
             return 0
         }
-
+        
         var dic: [Int: [[Int]]] = [:]
-
+        
         for route in routes {
             for dot in route {
                 if let arr = dic[dot] {
@@ -224,11 +245,11 @@ class LeetArray: NSObject {
                 }
             }
         }
-
+        
         guard var currRoutes = dic[S] else {        // 当前要遍历的线路
             return -1
         }
-
+        
         var nextRoutes: [[Int]] = []                // 下一次要遍历的线路
         var visitedRoutes: [[Int]] = currRoutes     // 已经便利过的线路
         var count: Int = 1
@@ -249,42 +270,14 @@ class LeetArray: NSObject {
                     }
                 }
             }
-
+            
             count += 1
             let tempRoutes = currRoutes
             currRoutes = nextRoutes
             nextRoutes = tempRoutes
         }
-
+        
         return -1
     }
 }
 
-// MARK: - 322. 零钱兑换
-extension LeetArray {
-    /// https://leetcode-cn.com/problems/coin-change/description/
-    func coinChange(_ coins: [Int], _ amount: Int) -> Int {
-
-        if coins.count == 0 {
-            return -1
-        }
-
-        if amount == 0 {
-            return 0
-        }
-
-        var dp = Array<Int>(repeating: 0, count: amount + 1)
-        for i in 1 ... amount {
-            var minCount = Int.max
-            for j in 0 ..< coins.count {
-                if i >= coins[j] && dp[i - coins[j]] != -1 {
-                    minCount = min(minCount, dp[i - coins[j]] + 1)
-                }
-            }
-
-            dp[i] = minCount == Int.max ? -1 : minCount
-        }
-
-        return dp[amount]
-    }
-}

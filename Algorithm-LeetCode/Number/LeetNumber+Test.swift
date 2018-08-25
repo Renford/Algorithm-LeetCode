@@ -33,4 +33,19 @@ extension LeetNumber {
         }
         print("\n=========各位相加 end=========\n")
     }
+    
+    func testMaxArea() {
+        print("\n=========最大面积 begin=========\n")
+        let array = [
+            [],
+            [1, 2, 1],
+            [1,8,6,2,5,4,8,3,7]
+        ]
+        
+        array.forEach { (arr) in
+            let result = maxArea(arr)
+            print("height: \(arr), max area result: \(result)")
+        }
+        print("\n=========最大面积 end=========\n")
+    }
 }

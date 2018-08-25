@@ -72,3 +72,30 @@ extension LeetNumber {
         return result
     }
 }
+
+// MARK: - 11. 盛最多水的容器
+extension LeetNumber {
+    func maxArea(_ height: [Int]) -> Int {
+//        guard height.count >= 2 else {
+//            return 0
+//        }
+        
+        var maxArea = 0
+        
+        var leftIndex = 0
+        var rightIndex = height.count - 1
+        
+        while rightIndex > leftIndex {
+            let tempArea = (rightIndex - leftIndex) * min(height[leftIndex], height[rightIndex])
+            maxArea = max(maxArea, tempArea)
+            
+            if height[leftIndex] < height[rightIndex] {
+                leftIndex += 1
+            } else {
+                rightIndex -= 1
+            }
+        }
+        
+        return maxArea
+    }
+}
