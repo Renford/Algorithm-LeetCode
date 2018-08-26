@@ -75,11 +75,8 @@ extension LeetNumber {
 
 // MARK: - 11. 盛最多水的容器
 extension LeetNumber {
+    /// https://leetcode-cn.com/problems/container-with-most-water/
     func maxArea(_ height: [Int]) -> Int {
-//        guard height.count >= 2 else {
-//            return 0
-//        }
-        
         var maxArea = 0
         
         var leftIndex = 0
@@ -97,5 +94,33 @@ extension LeetNumber {
         }
         
         return maxArea
+    }
+}
+
+// MARK: - 66. 加一
+extension LeetNumber {
+    /// https://leetcode-cn.com/problems/plus-one/description/
+    func plusOne(_ digits: [Int]) -> [Int] {
+        if digits.count == 0 {
+            return digits
+        }
+        
+        var result = digits
+        
+        for i in 0 ..< digits.count {
+            let index = digits.count - 1 - i
+            let digit = digits[index] + 1
+            if digit < 10 {
+                result[index] = digit
+                break
+            } else {
+                result[index] = digit - 10
+                if index == 0 {
+                    result.insert(1, at: 0)
+                }
+            }
+        }
+        
+        return result
     }
 }

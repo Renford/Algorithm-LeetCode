@@ -11,7 +11,8 @@ import UIKit
 class LTTreeTableViewController: BaseTableViewController {
     let algorithms = [
         "110.平衡二叉树",
-        "103. 二叉树的锯齿形层次遍历"
+        "103. 二叉树的锯齿形层次遍历",
+        "652. 寻找重复的子树"
     ]
 
     let leetTree = LeetTree()
@@ -53,7 +54,7 @@ class LTTreeTableViewController: BaseTableViewController {
         } else if indexPath.row == 1 {
             leetTree.testZigzagLevelOrder()
         } else if indexPath.row == 2 {
-
+            leetTree.testFindDuplicateSubtrees()
         }
     }
 

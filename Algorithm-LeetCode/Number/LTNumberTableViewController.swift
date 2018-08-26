@@ -13,7 +13,8 @@ class LTNumberTableViewController: BaseTableViewController {
     let algorithms = [
         "29. 两数相除",
         "258. 各位相加",
-        "11. 盛最多水的容器"
+        "11. 盛最多水的容器",
+        "66. 加一"
     ]
 
     let leetNumber = LeetNumber()
@@ -56,6 +57,8 @@ class LTNumberTableViewController: BaseTableViewController {
             leetNumber.testAddDigits()
         } else if indexPath.row == 2 {
             leetNumber.testMaxArea()
+        } else if indexPath.row == 3 {
+            leetNumber.testplusOne()
         }
     }
 }
