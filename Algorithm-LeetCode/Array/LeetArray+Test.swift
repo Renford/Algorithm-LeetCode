@@ -116,5 +116,23 @@ extension LeetArray {
 
         print("========公交线路end=========\n", Date().timeIntervalSince1970)
     }
+    
+    
+    func testDominantIndex() {
+        print("\n=========最大值 begin=========\n")
+        let array = [
+            [],
+            [9],
+            [1, 2, 1],
+            [0, 0, 0, 1],
+            [1,8,6,2,5,4,8,3,7]
+        ]
+        array.forEach { (arr) in
+            let result = dominantIndex(arr)
+            print("digits: \(arr),max value result: \(result)")
+        }
+        
+        print("\n=========最大值 end=========\n")
+    }
 
 }

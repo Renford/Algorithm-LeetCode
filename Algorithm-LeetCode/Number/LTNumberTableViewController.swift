@@ -14,7 +14,7 @@ class LTNumberTableViewController: BaseTableViewController {
         "29. 两数相除",
         "258. 各位相加",
         "11. 盛最多水的容器",
-        "66. 加一"
+        "66. 加一",
     ]
 
     let leetNumber = LeetNumber()

@@ -149,6 +149,49 @@ extension LeetString {
     }
 }
 
+// MARK: - 639. 解码方法
+extension LeetString {
+    /// https://leetcode-cn.com/problems/decode-ways-ii/description/
+    func numDecodings(_ s: String) -> Int {
+        
+        if s.count > 100000 {
+            return 0
+        }
+        
+        var count = 0
+        for index in 0 ..< s.count {
+            let char = s[String.Index(encodedOffset: index)]
+            if char == Character.init("*") {
+                count += 9
+                
+                if index - 1 >= 0 {
+                    let tempChar = s[String.Index(encodedOffset: index - 1)]
+                    if tempChar == Character.init("1") {
+                        count += 9
+                    } else if tempChar == Character.init("2") {
+                        count += 6
+                    } else if tempChar == Character.init("*") {
+                        count += 9 * 9 + 9 + 6 - 9 * 2
+                    }
+                }
+            } else {
+                if index - 1 >= 0 {
+                    let tempChar = s[String.Index(encodedOffset: index - 1)]
+                    if tempChar == Character.init("1") {
+                        count += 1
+                    } else if tempChar == Character.init("2") && (char.unicodeScalars.first?.value)! <= 6 {
+                        count += 1
+                    } else if tempChar == Character.init("*") {
+                        count += 2
+                    }
+                }
+            }
+        }
+        
+        return count
+    }
+}
+
 // MARK: - private method
 extension LeetString {
     fileprivate func checkKthEqual(_ strs: [String], _ index: Int) -> Character? {

@@ -84,4 +84,20 @@ extension LeetString {
         }
         print("\n=========找不同 222=========\n")
     }
+    
+    func testNumDecodings() {
+        print("\n========解码 111=========\n")
+        let array = [
+            "",
+            "*",
+            "1*",
+            "**",
+        ]
+        
+        array.forEach { (str) in
+            let result = numDecodings(str)
+            print("\(str) result: \(result)")
+        }
+        print("\n=========解码 222=========\n")
+    }
 }

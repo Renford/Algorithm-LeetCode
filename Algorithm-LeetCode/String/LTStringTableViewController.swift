@@ -16,7 +16,8 @@ class LTStringTableViewController: BaseTableViewController {
         "3. 无重复字符的最长子串",
         "5. 最长回文子串",
         "14. 最长公共前缀",
-        "389. 找不同"
+        "389. 找不同",
+        "639. 解码方法"
     ]
     
     let leetString = LeetString()
@@ -61,6 +62,8 @@ class LTStringTableViewController: BaseTableViewController {
             leetString.testCommonPrefix()
         } else if indexPath.row == 3 {
             leetString.testFindTheDifference()
+        } else if indexPath.row == 4 {
+            leetString.testNumDecodings()
         }
      }
 

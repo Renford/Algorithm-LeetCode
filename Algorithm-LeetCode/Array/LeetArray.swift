@@ -281,3 +281,34 @@ extension LeetArray {
     }
 }
 
+// MARK: - 747. 至少是其他数字两倍的最大数
+extension LeetArray {
+    func dominantIndex(_ nums: [Int]) -> Int {
+        if nums.count < 1 {
+            return -1
+        } else if nums.count == 1 {
+            return 0
+        }
+        
+        var result: Int = -1
+        var maxValue: Int = Int.min + 1
+        var secondValue: Int = Int.min
+        
+        nums.enumerated().forEach { (index, value) in
+            if maxValue < value {
+                secondValue = maxValue
+                maxValue = value
+                result = index
+            } else if secondValue < value && maxValue >= value {
+                secondValue = value
+            }
+        }
+        
+        if maxValue < secondValue * 2 {
+            result = -1
+        }
+        
+        return result
+    }
+}
+
