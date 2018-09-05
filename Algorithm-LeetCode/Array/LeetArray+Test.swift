@@ -9,7 +9,7 @@
 import Foundation
 
 extension LeetArray {
-    func testPerfectNumber() {
+    @objc func testPerfectNumber() {
         let array = [1, 2, 3, 5, 6, 28, 9999991]
         for num in array {
             let result = checkPerfectNumber(num)
@@ -34,7 +34,7 @@ extension LeetArray {
         print("========中位数测试结束=========\n")
     }
     
-    func testFindMin() {
+    @objc func testFindMin() {
         let array = [
             [],
             [1],
@@ -53,7 +53,7 @@ extension LeetArray {
         print("========升序旋转数组测试结束=========\n")
     }
 
-    func testLeastBricks() {
+    @objc func testLeastBricks() {
         print("========砖墙 begin=========\n")
         let array = [
             [1,2,2,1,2,2,1],
@@ -69,7 +69,7 @@ extension LeetArray {
         print("========砖墙 end=========\n")
     }
     
-    func testIntersectionSizeTwo() {
+    @objc func testIntersectionSizeTwo() {
         print("========交集大小 begin=========\n")
         let arr: [[Int]] = [
             [12, 19],
@@ -83,7 +83,7 @@ extension LeetArray {
         print("========交集大小end=========\n")
     }
 
-    func testNumBusesToDestination() {
+    @objc func testNumBusesToDestination() {
         var tempArray: [Int] = []
         for i in 0 ... 9999 {
             tempArray.append(i)
@@ -118,7 +118,7 @@ extension LeetArray {
     }
     
     
-    func testDominantIndex() {
+    @objc func testDominantIndex() {
         print("\n=========最大值 begin=========\n")
         let array = [
             [],
@@ -135,4 +135,27 @@ extension LeetArray {
         print("\n=========最大值 end=========\n")
     }
 
+    @objc func testSpiralOrder() {
+        print("\n=========螺旋矩阵 begin=========\n")
+        let array = [
+            [1, 2, 3, 4],
+            [5, 6, 7, 8],
+            [9,10,11,12]
+        ]
+        
+        let arr = spiralOrder(array)
+        print("array:", array, "\narr:", arr)
+        print("\n=========螺旋矩阵 end=========\n")
+    }
+    
+    @objc func testGenerate() {
+        print("\n=========杨辉三角 begin=========\n")
+        let arr = [0, 1, 2, 3, 6]
+        arr.forEach { (value) in
+            let result = generate(value)
+            print("value: \(value)\n", result)
+        }
+        
+        print("\n=========杨辉三角 end=========\n")
+    }
 }

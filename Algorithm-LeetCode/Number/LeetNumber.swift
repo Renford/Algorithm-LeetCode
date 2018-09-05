@@ -8,8 +8,7 @@
 
 import UIKit
 
-class LeetNumber: NSObject {
-
+public class LeetNumber: NSObject {
 
 }
 

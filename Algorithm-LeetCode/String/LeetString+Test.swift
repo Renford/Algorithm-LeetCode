@@ -9,7 +9,7 @@
 extension LeetString {
 
     // test 3
-    func testLongestSubstring() {
+    @objc func testLongestSubstring() {
         print("\n=========最大无重复子串 111=========\n")
 
         let arr = [
@@ -28,7 +28,7 @@ extension LeetString {
     }
 
     // test 5
-    func testLongestPalindrome() {
+    @objc func testLongestPalindrome() {
         let array = [
             "",
             "a",
@@ -51,7 +51,7 @@ extension LeetString {
     }
 
     // test 14
-    func testCommonPrefix() {
+    @objc func testCommonPrefix() {
         let array = [
             [],
             [""],
@@ -70,7 +70,7 @@ extension LeetString {
     }
 
     /// test 389
-    func testFindTheDifference() {
+    @objc func testFindTheDifference() {
         let array = [
             ["", ""],
             ["abcd", "abcde"],
@@ -85,7 +85,7 @@ extension LeetString {
         print("\n=========找不同 222=========\n")
     }
     
-    func testNumDecodings() {
+    @objc func testNumDecodings() {
         print("\n========解码 111=========\n")
         let array = [
             "",

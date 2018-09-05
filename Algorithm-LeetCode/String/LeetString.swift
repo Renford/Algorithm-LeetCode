@@ -192,6 +192,16 @@ extension LeetString {
     }
 }
 
+// MARK: - 二进制求和
+extension LeetString {
+//    func addBinary(_ a: String, _ b: String) -> String {
+//        let count = max(a.count, b.count)
+//        for i in 0 ..< count {
+//            
+//        }
+//    }
+}
+
 // MARK: - private method
 extension LeetString {
     fileprivate func checkKthEqual(_ strs: [String], _ index: Int) -> Character? {
@@ -218,3 +228,4 @@ extension LeetString {
         return result
     }
 }
+

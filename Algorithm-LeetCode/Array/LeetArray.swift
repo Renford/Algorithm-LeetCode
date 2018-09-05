@@ -312,3 +312,80 @@ extension LeetArray {
     }
 }
 
+// MARK: - 54. 螺旋矩阵
+extension LeetArray {
+    func spiralOrder(_ matrix: [[Int]]) -> [Int] {
+        var result: [Int] = []
+        if let firstCol = matrix.first {
+            var x = 0
+            var y = 0
+            var row = matrix.count - 1
+            var col = firstCol.count - 1
+            while x <= row && y <= col {
+                
+                if x <= col {
+                    for i in x ... col {
+                        result.append(matrix[y][i])
+                    }
+                }
+                
+                if y + 1 <= row {
+                    for j in y + 1 ... row {
+                        result.append(matrix[j][col])
+                    }
+                }
+ 
+                if x <= col - 1 && y != row {
+                    for i in (x ... col - 1).reversed() {
+                        result.append(matrix[row][i])
+                    }
+                }
+                
+                if y < row - 1 && x != col {
+                    for j in (y + 1 ... row - 1).reversed() {
+                        result.append(matrix[j][x])
+                    }
+                }
+                
+                x += 1
+                y += 1
+                row -= 1
+                col -= 1
+                
+            }
+        }
+        
+        return result
+    }
+}
+
+// MARK: - 118.杨辉三角
+extension LeetArray {
+    func generate(_ numRows: Int) -> [[Int]] {
+        if numRows == 0 {
+            return []
+        }
+        
+        var result: [[Int]] = []
+        for i in 1 ... numRows {
+            var arr: [Int] = []
+            for j in 0 ..< i {
+                if j == 0 || j == i - 1 {
+                    arr.append(1)
+                } else {
+                    if let tempArray = result.last {
+                        let value = tempArray[j - 1] + tempArray[j]
+                        arr.append(value)
+                    }
+                }
+            }
+            result.append(arr)
+        }
+        
+        return result
+    }
+}
+
+extension LeetArray {
+    
+}

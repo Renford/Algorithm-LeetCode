@@ -9,7 +9,8 @@
 import Foundation
 
 extension LeetNumber {
-    func testDivide() {
+    
+    @objc func testDivide() {
         print("\n=========两数相除 begin=========\n")
         let arr = [
             [10, 1],
@@ -24,7 +25,7 @@ extension LeetNumber {
         print("\n=========两数相除 end=========\n")
     }
 
-    func testAddDigits() {
+    @objc func testAddDigits() {
         print("\n=========各位相加 begin=========\n")
         let arr = [0, 10, 19]
         arr.forEach { (value) in
@@ -34,7 +35,7 @@ extension LeetNumber {
         print("\n=========各位相加 end=========\n")
     }
     
-    func testMaxArea() {
+    @objc func testMaxArea() {
         print("\n=========最大面积 begin=========\n")
         let array = [
             [],
@@ -49,7 +50,7 @@ extension LeetNumber {
         print("\n=========最大面积 end=========\n")
     }
     
-    func testplusOne() {
+    @objc func testplusOne() {
         print("\n=========加一 begin=========\n")
         let array = [
             [],

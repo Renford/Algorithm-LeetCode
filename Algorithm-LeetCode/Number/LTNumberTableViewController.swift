@@ -11,18 +11,16 @@ import UIKit
 class LTNumberTableViewController: BaseTableViewController {
 
     let algorithms = [
-        "29. 两数相除",
-        "258. 各位相加",
-        "11. 盛最多水的容器",
-        "66. 加一",
+        "29. 两数相除": "testDivide",
+        "258. 各位相加": "testAddDigits",
+        "11. 盛最多水的容器": "testMaxArea",
+        "66. 加一": "testplusOne",
     ]
 
     let leetNumber = LeetNumber()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,22 +41,17 @@ class LTNumberTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
 
-        cell.textLabel?.text = algorithms[indexPath.row]
+        cell.textLabel?.text = Array(algorithms.keys)[indexPath.row]
 
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
-        if indexPath.row == 0 {
-            leetNumber.testDivide()
-        } else if indexPath.row == 1 {
-            leetNumber.testAddDigits()
-        } else if indexPath.row == 2 {
-            leetNumber.testMaxArea()
-        } else if indexPath.row == 3 {
-            leetNumber.testplusOne()
+        
+        if let title = tableView.cellForRow(at: indexPath)?.textLabel?.text, let selName = algorithms[title] {
+            let sel = NSSelectorFromString(selName)
+            leetNumber.perform(sel)
         }
     }
 }

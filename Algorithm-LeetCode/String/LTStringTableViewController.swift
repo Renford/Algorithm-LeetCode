@@ -13,11 +13,11 @@ import ObjectiveC
 class LTStringTableViewController: BaseTableViewController {
     
     let algorithms = [
-        "3. 无重复字符的最长子串",
-        "5. 最长回文子串",
-        "14. 最长公共前缀",
-        "389. 找不同",
-        "639. 解码方法"
+        "3. 无重复字符的最长子串": "testLongestSubstring",
+        "5. 最长回文子串": "testLongestPalindrome",
+        "14. 最长公共前缀": "testCommonPrefix",
+        "389. 找不同": "testFindTheDifference",
+        "639. 解码方法": "testNumDecodings"
     ]
     
     let leetString = LeetString()
@@ -45,26 +45,19 @@ class LTStringTableViewController: BaseTableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-
-        cell.textLabel?.text = algorithms[indexPath.row]
-
+        
+        cell.textLabel?.text = Array(algorithms.keys)[indexPath.row]
+        
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
-        if indexPath.row == 0 {
-            leetString.testLongestSubstring()
-        } else if indexPath.row == 1 {
-            leetString.testLongestPalindrome()
-        } else if indexPath.row == 2 {
-            leetString.testCommonPrefix()
-        } else if indexPath.row == 3 {
-            leetString.testFindTheDifference()
-        } else if indexPath.row == 4 {
-            leetString.testNumDecodings()
+        
+        if let title = tableView.cellForRow(at: indexPath)?.textLabel?.text, let selName = algorithms[title] {
+            let sel = NSSelectorFromString(selName)
+            leetString.perform(sel)
         }
-     }
+    }
 
 }

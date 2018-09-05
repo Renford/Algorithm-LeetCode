@@ -13,15 +13,15 @@ class LTArrayTableViewController: BaseTableViewController {
     let leetArray = LeetArray()
     
     let algorithms = [
-        "507. 完美数",
-        "4. 两个排序数组的中位数",
-        "153. 寻找旋转排序数组@objc @objc @objc (如[4,5,6,7,0,1,2,3])中的最小值",
-        "554. 砖墙",
-        "757. 设置交集大小至少为2",
-        "815. 公交路线",
-        "",
-        "747. 至少是其他数字两倍的最大数"
-        
+        "507. 完美数": "testPerfectNumber",
+        "4. 两个排序数组的中位数": "testMedianNumber",
+        "153. 寻找旋转排序数组中的最小值": "testFindMin",
+        "554. 砖墙": "testLeastBricks",
+        "757. 设置交集大小至少为2": "testIntersectionSizeTwo",
+        "815. 公交路线": "testNumBusesToDestination",
+        "747. 至少是其他数字两倍的最大数": "testDominantIndex",
+        "54.螺旋矩阵": "testSpiralOrder",
+        "118.杨辉三角": "testGenerate",
     ]
     
     override func viewDidLoad() {
@@ -53,29 +53,17 @@ class LTArrayTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         
-        cell.textLabel?.text = algorithms[indexPath.row]
+        cell.textLabel?.text = Array(algorithms.keys)[indexPath.row]
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
-        if indexPath.row == 0 {
-            leetArray.testPerfectNumber()
-        } else if indexPath.row == 1 {
-            leetArray.testMedianNumber()
-        } else if indexPath.row == 2 {
-            leetArray.testFindMin()
-        } else if indexPath.row == 3 {
-            leetArray.testLeastBricks()
-        } else if indexPath.row == 4 {
-            leetArray.testIntersectionSizeTwo()
-        } else if indexPath.row == 5 {
-            leetArray.testNumBusesToDestination()
-        } else if indexPath.row == 6 {
-        } else if indexPath.row == 7 {
-            leetArray.testDominantIndex()
+        
+        if let title = tableView.cellForRow(at: indexPath)?.textLabel?.text, let selName = algorithms[title] {
+            let sel = NSSelectorFromString(selName)
+            leetArray.perform(sel)
         }
     }
 
