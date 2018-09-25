@@ -40,3 +40,46 @@ extension LeetDynamic {
         return dp[amount]
     }
 }
+
+extension LeetDynamic {
+    func numDecodings(_ s: String) -> Int {
+        var f1 = 1
+//        var f2 = numString(s[0 ... 1])
+        for i in 1 ..< s.count {
+
+        }
+        return 0
+    }
+
+    func numString(_ s: String) -> Int {
+        var count = 0
+        if s.count == 1 {
+            count = s == "*" ? 9 : 1
+        } else if s.count == 2 {
+            if s == "**" {
+                count = 15
+            } else if s[String.Index(encodedOffset: 0)] == "*" {
+                let value = (s[String.Index(encodedOffset: 1)].unicodeScalars.first?.value)!
+                if value <= 6 {
+                    count = 2
+                } else {
+                    count = 1
+                }
+            } else if s[String.Index(encodedOffset: 1)] == "*" {
+                if s[String.Index(encodedOffset: 0)] == "1" {
+                    count = 9
+                } else if s[String.Index(encodedOffset: 0)] == "2" {
+                    count = 6
+                }
+            } else {
+                if let value = Int(s) {
+                    if value > 10 && value <= 26 {
+                        count = 1
+                    }
+                }
+            }
+        }
+
+        return count
+    }
+}

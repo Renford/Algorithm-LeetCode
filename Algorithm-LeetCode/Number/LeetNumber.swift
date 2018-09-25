@@ -124,3 +124,19 @@ extension LeetNumber {
     }
 }
 
+extension LeetNumber {
+    func consecutiveNumbersSum(_ N: Int) -> Int {
+        /// 使用等差数列求和公式，a > 0，解一元二次方程
+        var count = 0
+
+        for i in 0 ..< N {
+            let an = i * (i + 1) / 2
+            if an > N {
+                break
+            }
+
+        }
+
+        return count
+    }
+}
