@@ -6,6 +6,8 @@
 //  Copyright © 2018年 Renford. All rights reserved.
 //
 
+import Foundation
+
 extension LeetString {
 
     // test 3

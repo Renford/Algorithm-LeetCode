@@ -67,4 +67,11 @@ extension LeetTree {
         }
         print("\n=========寻找重复子树 end=========\n")
     }
+
+    func testIsSymmetric() {
+        let arr = [1,2,2,3,4,4,3]
+        let tree = array2Tree(arr, 0)
+        let result = isSymmetric(tree)
+        print("===result: \(result)")
+    }
 }

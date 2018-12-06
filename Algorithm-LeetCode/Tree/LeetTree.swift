@@ -165,3 +165,28 @@ extension LeetTree {
         
     }
 }
+
+
+extension LeetTree {
+    func isSymmetric(_ root: TreeNode?) -> Bool {
+        return isSymmetricCore(root, root)
+    }
+
+    fileprivate func isSymmetricCore(_ root1: TreeNode?, _ root2: TreeNode?) -> Bool {
+
+        if root1 == nil && root2 == nil {
+            return true
+        }
+
+        guard let r1 = root1, let r2 = root2 else {
+            return false
+        }
+
+        if r1.val != r2.val {
+            return false
+        }
+
+        return isSymmetricCore(r1.left, r2.right) && isSymmetricCore(r1.right, r2.left)
+    }
+}
+
