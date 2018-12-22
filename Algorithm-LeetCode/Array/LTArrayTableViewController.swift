@@ -22,6 +22,8 @@ class LTArrayTableViewController: BaseTableViewController {
         "747. 至少是其他数字两倍的最大数": "testDominantIndex",
         "54.螺旋矩阵": "testSpiralOrder",
         "118.杨辉三角": "testGenerate",
+        "27.移除元素": "testRemoveElement",
+        "485.最大连续1的个数": "testFindMaxConsecutiveOnes"
     ]
     
     override func viewDidLoad() {

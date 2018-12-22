@@ -158,4 +158,37 @@ extension LeetArray {
         
         print("\n=========杨辉三角 end=========\n")
     }
+    
+    @objc func testRemoveElement() {
+        print("\n=========移除元素 begin=========\n")
+        let array = [
+            [1, 2, 4, 4, 1],
+            [1],
+            [],
+            [1, 1, 1, 1]
+        ]
+        
+        array.forEach { (arr) in
+            var tempArray = arr
+            let result = removeElement(&tempArray, 1)
+            print("====remove element result", tempArray, result)
+        }
+        print("\n=========移除元素 end=========\n")
+    }
+    
+    @objc func testFindMaxConsecutiveOnes() {
+        print("\n=========1的最大连续个数 begin=========\n")
+        let array = [
+            [1, 1, 4, 1, 1, 1],
+            [1],
+            [],
+            [1, 1, 1, 1]
+        ]
+        
+        array.forEach { (arr) in
+            let result = findMaxConsecutiveOnes(arr)
+            print("====max count", arr, result)
+        }
+        print("\n=========1的最大连续个数 end=========\n")
+    }
 }

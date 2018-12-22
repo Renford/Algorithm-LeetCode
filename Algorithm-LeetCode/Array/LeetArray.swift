@@ -386,6 +386,44 @@ extension LeetArray {
     }
 }
 
+// MARK: - 27.移除元素
 extension LeetArray {
-    
+    func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
+        var count = 0
+        for i in 0 ..< nums.count {
+            if nums[i] == val {
+                count += 1
+            } else {
+                if count > 0 {
+                    nums[i - count] = nums[i]
+                }
+            }
+        }
+        
+        return nums.count - count
+    }
+}
+
+// MARK: - 485.最大连续1的个数
+extension LeetArray {
+    func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
+        var result = 0
+        var tempCount = 0
+        
+        nums.enumerated().forEach { (index, val) in
+            if val == 1 {
+                tempCount += 1
+                if index == nums.count - 1 && tempCount > result{
+                    result = tempCount
+                }
+            } else {
+                if tempCount > result {
+                    result = tempCount
+                }
+                tempCount = 0
+            }
+        }
+        
+        return result
+    }
 }
