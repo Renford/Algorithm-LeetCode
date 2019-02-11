@@ -10,7 +10,7 @@ import Foundation
 
 extension LeetLinkList {
     
-    func testMergeTwoLists() {
+    @objc func testMergeTwoLists() {
         print("\n=========两个有序链表合并 begin =========\n")
         let array = [
             [[1, 8, 9], [2, 3, 4]],
@@ -31,7 +31,7 @@ extension LeetLinkList {
         print("\n=========两个有序链表合并 end =========\n")
     }
     
-    func testMergeKLists() {
+    @objc func testMergeKLists() {
         print("\n=========有序链表合并 begin =========\n")
 
         var array = [
@@ -61,7 +61,7 @@ extension LeetLinkList {
         print("\n=========有序链表合并 end =========\n")
     }
     
-    func testRemoveNthFromEnd() {
+    @objc func testRemoveNthFromEnd() {
         print("\n=========删除倒数第n个节点 begin =========\n")
         
         let array = [
@@ -81,7 +81,7 @@ extension LeetLinkList {
         print("\n=========删除倒数第n个节点 end =========\n")
     }
 
-    func testDeleteDuplicates() {
+    @objc func testDeleteDuplicates() {
         print("\n=========删除重复节点 begin =========\n")
 
         let array = [
@@ -101,5 +101,25 @@ extension LeetLinkList {
         }
 
         print("\n=========删除重复节点 end =========\n")
+    }
+
+    @objc func testSinglyLikedList() {
+        let obj = MyLinkedList()
+        obj.addAtHead(5)
+        obj.addAtHead(2)
+        obj.deleteAtIndex(1)
+        obj.printLinkedList("0")
+        obj.addAtIndex(1, 9)
+        obj.addAtHead(4)
+        obj.addAtHead(9)
+        obj.addAtHead(8)
+        obj.deleteAtIndex(4)
+        obj.printLinkedList("1")
+        obj.addAtTail(1)
+        obj.printLinkedList("2")
+        obj.addAtIndex(3,6)
+        obj.printLinkedList("3")
+        obj.addAtHead(3)
+        obj.printLinkedList("4")
     }
 }

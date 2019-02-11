@@ -11,7 +11,11 @@ import UIKit
 class LTLinkTableViewController: BaseTableViewController {
 
     let algorithms = [
-        "83. 删除排序链表中的重复元素",
+        "19. 删除链表的倒数第N个节点": "testRemoveNthFromEnd",
+        "21. 合并两个有序链表": "testMergeTwoLists",
+        "23. 合并K个有序链表": "testMergeKLists",
+        "83. 删除排序链表中的重复元素": "testDeleteDuplicates",
+        "707. 设计链表": "testSinglyLikedList",
     ]
 
     let leetLink = LeetLinkList()
@@ -40,7 +44,7 @@ class LTLinkTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
 
-        cell.textLabel?.text = algorithms[indexPath.row]
+        cell.textLabel?.text = Array(algorithms.keys)[indexPath.row]
 
         return cell
     }
@@ -48,10 +52,9 @@ class LTLinkTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        if indexPath.row == 0 {
-            leetLink.testDeleteDuplicates()
-        } else if indexPath.row == 1 {
-        } else if indexPath.row == 2 {
+        if let title = tableView.cellForRow(at: indexPath)?.textLabel?.text, let selName = algorithms[title] {
+            let sel = NSSelectorFromString(selName)
+            leetLink.perform(sel)
         }
     }
 

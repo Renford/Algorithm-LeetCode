@@ -26,6 +26,7 @@
 		5781E76B2130F4430020AA2B /* LTDynamicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5781E76A2130F4430020AA2B /* LTDynamicTableViewController.swift */; };
 		57B7B12F2113291F00B63DB8 /* LeetArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7B12E2113291F00B63DB8 /* LeetArray.swift */; };
 		8F016B8C210FE67300E93025 /* LeetLinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F016B8B210FE67300E93025 /* LeetLinkList.swift */; };
+		8F2AA26F2211173A00D4604D /* SinglyLikedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2AA26E2211173A00D4604D /* SinglyLikedList.swift */; };
 		8F959126211D15A700B8D772 /* LeetCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F959125211D15A700B8D772 /* LeetCache.swift */; };
 		8F959128211D15BC00B8D772 /* LeetCache+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F959127211D15BC00B8D772 /* LeetCache+Test.swift */; };
 		8FA077E22123B3B8000E807D /* LeetNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA077E12123B3B8000E807D /* LeetNumber.swift */; };
@@ -58,6 +59,7 @@
 		5781E76A2130F4430020AA2B /* LTDynamicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTDynamicTableViewController.swift; sourceTree = "<group>"; };
 		57B7B12E2113291F00B63DB8 /* LeetArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetArray.swift; sourceTree = "<group>"; };
 		8F016B8B210FE67300E93025 /* LeetLinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetLinkList.swift; sourceTree = "<group>"; };
+		8F2AA26E2211173A00D4604D /* SinglyLikedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglyLikedList.swift; sourceTree = "<group>"; };
 		8F959125211D15A700B8D772 /* LeetCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCache.swift; sourceTree = "<group>"; };
 		8F959127211D15BC00B8D772 /* LeetCache+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetCache+Test.swift"; sourceTree = "<group>"; };
 		8FA077E12123B3B8000E807D /* LeetNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetNumber.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				8F016B8B210FE67300E93025 /* LeetLinkList.swift */,
+				8F2AA26E2211173A00D4604D /* SinglyLikedList.swift */,
 				8FB837D7211289B500A3C73A /* LeetLinkList+Test.swift */,
 				5781E762211E56540020AA2B /* LTLinkTableViewController.swift */,
 			);
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F2AA26F2211173A00D4604D /* SinglyLikedList.swift in Sources */,
 				5781E75F211E54DA0020AA2B /* MainTableViewController.swift in Sources */,
 				57B7B12F2113291F00B63DB8 /* LeetArray.swift in Sources */,
 				5781E761211E56060020AA2B /* LTArrayTableViewController.swift in Sources */,
