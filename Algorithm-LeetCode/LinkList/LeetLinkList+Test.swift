@@ -122,4 +122,20 @@ extension LeetLinkList {
         obj.addAtHead(3)
         obj.printLinkedList("4")
     }
+
+    @objc func testRemoveElements() {
+        let array = [
+            [1, 2, 1, 1],
+            [1, 1, 1]
+        ]
+        array.forEach { (arr) in
+            let head = array2LinkList(arr)
+
+            travlLinkList(head)
+            let relHead = removeElements(head, 1)
+
+            travlLinkList(relHead)
+        }
+
+    }
 }

@@ -33,12 +33,14 @@ class LeetLinkList: NSObject {
 
     func travlLinkList(_ head: ListNode?) {
         var currNode = head
+        print("\n===travel begain:")
         while currNode != nil {
             if let node = currNode {
-                print("node = ", node.val)
+                print(node.val)
                 currNode = node.next
             }
         }
+        print("===travel end\n")
     }
 
 }
@@ -161,6 +163,31 @@ extension LeetLinkList {
         }
 
         return head
+    }
+}
+
+
+// MARK: - 203. 移除链表元素
+extension LeetLinkList {
+    func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
+        var result = head
+        var node: ListNode? = head
+        var prev: ListNode? = nil
+        while let currNode = node {
+            if currNode.val == val {
+                node = currNode.next
+                if let prevNode = prev {
+                    prevNode.next = currNode.next
+                } else {
+                    result = currNode.next
+                }
+            } else {
+                node = currNode.next
+                prev = currNode
+            }
+        }
+
+        return result
     }
 }
 
