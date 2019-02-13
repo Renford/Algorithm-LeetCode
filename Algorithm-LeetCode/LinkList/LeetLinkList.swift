@@ -191,6 +191,37 @@ extension LeetLinkList {
     }
 }
 
+// MARK: - 328. 奇偶链表
+extension LeetLinkList {
+    func oddEvenList(_ head: ListNode?) -> ListNode? {
+        guard let oddHead = head, let evenHead = oddHead.next else {
+            return head
+        }
+
+        var oddTail = oddHead
+        var evenTail = evenHead
+
+        var node = evenHead.next
+        var index = 1
+        while let currNode = node {
+            if index % 2 == 0 {
+                evenTail.next = node
+                evenTail = evenTail.next!
+            } else {
+                oddTail.next = node
+                oddTail = oddTail.next!
+            }
+            node = currNode.next
+            index += 1
+        }
+
+        oddTail.next = evenHead
+        evenTail.next = nil
+        
+        return oddHead
+    }
+}
+
 extension LeetLinkList {
     func hasCycle(_ head: ListNode?) -> Bool {
         return false

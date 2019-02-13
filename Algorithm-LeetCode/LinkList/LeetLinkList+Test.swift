@@ -138,4 +138,18 @@ extension LeetLinkList {
         }
 
     }
+
+    @objc func testOddEvenList() {
+        let array = [
+            [1, 2, 3, 4, 5],
+            [1],
+            []
+        ]
+        array.forEach { (arr) in
+            let head = array2LinkList(arr)
+
+            let relHead = oddEvenList(head)
+            travlLinkList(relHead)
+        }
+    }
 }
