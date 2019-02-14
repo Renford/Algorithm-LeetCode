@@ -225,10 +225,6 @@ extension LeetLinkList {
 // MARK: - 234. 回文链表
 extension LeetLinkList {
     func isPalindrome(_ head: ListNode?) -> Bool {
-        if head == nil {
-            return false
-        }
-        
         var slow = head
         var fast = head?.next
         while let tempFast = fast {
@@ -255,6 +251,65 @@ extension LeetLinkList {
         }
 
         return true
+    }
+}
+
+// MARK: - 2. 两数相加
+extension LeetLinkList {
+    func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+        var result = l1
+        var tail: ListNode? = nil
+
+        var flag = false
+        var node1 = l1
+        var node2 = l2
+        while let tempNode1 = node1, let tempNode2 = node2 {
+            let tempValue = flag ? 1 : 0
+            let value = tempNode1.val + tempNode2.val + tempValue
+            flag = value > 9 ? true : false
+
+            tempNode1.val = value % 10
+            tempNode2.val = value % 10
+
+            node1 = tempNode1.next
+            node2 = tempNode2.next
+
+            tail = tempNode1
+        }
+
+        while let tempNode1 = node1 {
+            result = l1
+            if flag {
+                let tempValue = flag ? 1 : 0
+                let value = tempNode1.val + tempValue
+                flag = value > 9 ? true : false
+                tempNode1.val = value % 10
+            } else {
+                break
+            }
+            node1 = tempNode1.next
+            tail = tempNode1
+        }
+
+        while let tempNode2 = node2 {
+            result = l2
+            if flag {
+                let tempValue = flag ? 1 : 0
+                let value = tempNode2.val + tempValue
+                flag = value > 9 ? true : false
+                tempNode2.val = value % 10
+            } else {
+                break
+            }
+            node2 = tempNode2.next
+            tail = tempNode2
+        }
+
+        if flag {
+            tail?.next = ListNode.init(1)
+        }
+
+        return result
     }
 }
 

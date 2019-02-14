@@ -18,7 +18,8 @@ class LTLinkTableViewController: BaseTableViewController {
         "707. 设计链表": "testSinglyLikedList",
         "203. 移除链表元素": "testRemoveElements",
         "328. 奇偶链表": "testOddEvenList",
-        "234. 回文链表": "testIsPalindrome"
+        "234. 回文链表": "testIsPalindrome",
+        "2. 两数相加": "testAddTwoNumbers"
     ]
 
     let leetLink = LeetLinkList()

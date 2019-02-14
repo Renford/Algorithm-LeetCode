@@ -167,4 +167,20 @@ extension LeetLinkList {
             print("===arr:\(arr), result:\(result)")
         }
     }
+
+    @objc func testAddTwoNumbers() {
+        let array = [
+            [[2, 4, 3], [5, 6, 4]],
+            [[1, 2, 3], [5, 5, 5]],
+            [[1], [1, 1, 1]],
+            [[1], [9, 9]]
+        ]
+        array.forEach { (arr) in
+            print("===\(arr)")
+            let head1 = array2LinkList(arr[0])
+            let head2 = array2LinkList(arr[1])
+            let result = addTwoNumbers(head1, head2)
+            travlLinkList(result)
+        }
+    }
 }
