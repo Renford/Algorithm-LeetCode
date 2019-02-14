@@ -152,4 +152,19 @@ extension LeetLinkList {
             travlLinkList(relHead)
         }
     }
+
+    @objc func testIsPalindrome() {
+        let array = [
+            [1, 2, 3, 2, 1],
+            [1, 2, 2, 1],
+            [1, 2, 3],
+            [1],
+            []
+        ]
+        array.forEach { (arr) in
+            let head = array2LinkList(arr)
+            let result = isPalindrome(head)
+            print("===arr:\(arr), result:\(result)")
+        }
+    }
 }

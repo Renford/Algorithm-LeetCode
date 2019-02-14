@@ -222,6 +222,42 @@ extension LeetLinkList {
     }
 }
 
+// MARK: - 234. 回文链表
+extension LeetLinkList {
+    func isPalindrome(_ head: ListNode?) -> Bool {
+        if head == nil {
+            return false
+        }
+        
+        var slow = head
+        var fast = head?.next
+        while let tempFast = fast {
+            slow = slow?.next
+            fast = tempFast.next?.next
+        }
+
+        var prev: ListNode? = nil
+        while let tempSlow = slow {
+            let next = tempSlow.next
+            tempSlow.next = prev
+            prev = tempSlow
+            slow = next
+        }
+
+        var node1 = head
+        var node2 = prev
+        while let tempNode1 = node1, let tempNode2 = node2 {
+            if tempNode1.val != tempNode2.val {
+                return false
+            }
+            node1 = tempNode1.next
+            node2 = tempNode2.next
+        }
+
+        return true
+    }
+}
+
 extension LeetLinkList {
     func hasCycle(_ head: ListNode?) -> Bool {
         return false

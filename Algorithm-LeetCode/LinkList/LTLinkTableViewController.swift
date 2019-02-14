@@ -17,15 +17,14 @@ class LTLinkTableViewController: BaseTableViewController {
         "83. 删除排序链表中的重复元素": "testDeleteDuplicates",
         "707. 设计链表": "testSinglyLikedList",
         "203. 移除链表元素": "testRemoveElements",
-        "328. 奇偶链表": "testOddEvenList"
+        "328. 奇偶链表": "testOddEvenList",
+        "234. 回文链表": "testIsPalindrome"
     ]
 
     let leetLink = LeetLinkList()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
     }
 
     override func didReceiveMemoryWarning() {
