@@ -183,4 +183,8 @@ extension LeetLinkList {
             travlLinkList(result)
         }
     }
+
+    @objc func testRotateRight() {
+
+    }
 }

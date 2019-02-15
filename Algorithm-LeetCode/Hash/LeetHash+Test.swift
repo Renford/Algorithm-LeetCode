@@ -21,4 +21,17 @@ extension LeetHash {
         let ret4 = hashSet.contains(100);
         print("===result:\(ret1) \(ret2) \(ret3) \(ret4)")
     }
+
+    @objc func testLTHashMap() {
+        let hashMap = LTHashMap()
+        hashMap.put(1, 1);
+        hashMap.put(2, 2);
+        let ret1 = hashMap.get(2);
+        let ret3 = hashMap.get(3);
+        hashMap.put(2, 1);
+        let ret2 = hashMap.get(2);
+        hashMap.remove(2);
+        let ret22 = hashMap.get(2);
+        print("===result: \(ret1) \(ret3) \(ret2) \(ret22)")
+    }
 }

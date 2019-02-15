@@ -31,6 +31,7 @@
 		8F5630AB221641A600F5946A /* LeetHash+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5630AA221641A600F5946A /* LeetHash+Test.swift */; };
 		8F5630AD221641D600F5946A /* LTHashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5630AC221641D600F5946A /* LTHashTableViewController.swift */; };
 		8F5630AF221642F700F5946A /* LTHashSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5630AE221642F700F5946A /* LTHashSet.swift */; };
+		8F5630B1221657C400F5946A /* LTHashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5630B0221657C400F5946A /* LTHashMap.swift */; };
 		8F959126211D15A700B8D772 /* LeetCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F959125211D15A700B8D772 /* LeetCache.swift */; };
 		8F959128211D15BC00B8D772 /* LeetCache+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F959127211D15BC00B8D772 /* LeetCache+Test.swift */; };
 		8FA077E22123B3B8000E807D /* LeetNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA077E12123B3B8000E807D /* LeetNumber.swift */; };
@@ -68,6 +69,7 @@
 		8F5630AA221641A600F5946A /* LeetHash+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetHash+Test.swift"; sourceTree = "<group>"; };
 		8F5630AC221641D600F5946A /* LTHashTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHashTableViewController.swift; sourceTree = "<group>"; };
 		8F5630AE221642F700F5946A /* LTHashSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHashSet.swift; sourceTree = "<group>"; };
+		8F5630B0221657C400F5946A /* LTHashMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHashMap.swift; sourceTree = "<group>"; };
 		8F959125211D15A700B8D772 /* LeetCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCache.swift; sourceTree = "<group>"; };
 		8F959127211D15BC00B8D772 /* LeetCache+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetCache+Test.swift"; sourceTree = "<group>"; };
 		8FA077E12123B3B8000E807D /* LeetNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetNumber.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				8F5630AA221641A600F5946A /* LeetHash+Test.swift */,
 				8F5630AC221641D600F5946A /* LTHashTableViewController.swift */,
 				8F5630AE221642F700F5946A /* LTHashSet.swift */,
+				8F5630B0221657C400F5946A /* LTHashMap.swift */,
 			);
 			path = Hash;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F5630B1221657C400F5946A /* LTHashMap.swift in Sources */,
 				8F2AA26F2211173A00D4604D /* SinglyLikedList.swift in Sources */,
 				8F5630AD221641D600F5946A /* LTHashTableViewController.swift in Sources */,
 				5781E75F211E54DA0020AA2B /* MainTableViewController.swift in Sources */,

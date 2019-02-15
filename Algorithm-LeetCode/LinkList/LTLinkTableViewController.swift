@@ -11,15 +11,16 @@ import UIKit
 class LTLinkTableViewController: BaseTableViewController {
 
     let algorithms = [
+        "2. 两数相加": "testAddTwoNumbers",
         "19. 删除链表的倒数第N个节点": "testRemoveNthFromEnd",
         "21. 合并两个有序链表": "testMergeTwoLists",
         "23. 合并K个有序链表": "testMergeKLists",
+        "61. 旋转链表": "testRotateRight",
         "83. 删除排序链表中的重复元素": "testDeleteDuplicates",
-        "707. 设计链表": "testSinglyLikedList",
         "203. 移除链表元素": "testRemoveElements",
-        "328. 奇偶链表": "testOddEvenList",
         "234. 回文链表": "testIsPalindrome",
-        "2. 两数相加": "testAddTwoNumbers"
+        "328. 奇偶链表": "testOddEvenList",
+        "707. 设计链表": "testSinglyLikedList",
     ]
 
     let leetLink = LeetLinkList()

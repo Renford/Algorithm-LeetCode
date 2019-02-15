@@ -12,6 +12,7 @@ class LTHashTableViewController: BaseTableViewController {
 
     let algorithms = [
         "705. 设计哈希集合": "testLTHashSet",
+        "706. 设计哈希映射": "testLTHashMap"
     ]
 
     let leetHash = LeetHash()
