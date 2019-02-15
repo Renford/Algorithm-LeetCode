@@ -27,6 +27,10 @@
 		57B7B12F2113291F00B63DB8 /* LeetArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7B12E2113291F00B63DB8 /* LeetArray.swift */; };
 		8F016B8C210FE67300E93025 /* LeetLinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F016B8B210FE67300E93025 /* LeetLinkList.swift */; };
 		8F2AA26F2211173A00D4604D /* SinglyLikedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2AA26E2211173A00D4604D /* SinglyLikedList.swift */; };
+		8F5630A92216416900F5946A /* LeetHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5630A82216416900F5946A /* LeetHash.swift */; };
+		8F5630AB221641A600F5946A /* LeetHash+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5630AA221641A600F5946A /* LeetHash+Test.swift */; };
+		8F5630AD221641D600F5946A /* LTHashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5630AC221641D600F5946A /* LTHashTableViewController.swift */; };
+		8F5630AF221642F700F5946A /* LTHashSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5630AE221642F700F5946A /* LTHashSet.swift */; };
 		8F959126211D15A700B8D772 /* LeetCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F959125211D15A700B8D772 /* LeetCache.swift */; };
 		8F959128211D15BC00B8D772 /* LeetCache+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F959127211D15BC00B8D772 /* LeetCache+Test.swift */; };
 		8FA077E22123B3B8000E807D /* LeetNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA077E12123B3B8000E807D /* LeetNumber.swift */; };
@@ -60,6 +64,10 @@
 		57B7B12E2113291F00B63DB8 /* LeetArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetArray.swift; sourceTree = "<group>"; };
 		8F016B8B210FE67300E93025 /* LeetLinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetLinkList.swift; sourceTree = "<group>"; };
 		8F2AA26E2211173A00D4604D /* SinglyLikedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglyLikedList.swift; sourceTree = "<group>"; };
+		8F5630A82216416900F5946A /* LeetHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetHash.swift; sourceTree = "<group>"; };
+		8F5630AA221641A600F5946A /* LeetHash+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetHash+Test.swift"; sourceTree = "<group>"; };
+		8F5630AC221641D600F5946A /* LTHashTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHashTableViewController.swift; sourceTree = "<group>"; };
+		8F5630AE221642F700F5946A /* LTHashSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHashSet.swift; sourceTree = "<group>"; };
 		8F959125211D15A700B8D772 /* LeetCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCache.swift; sourceTree = "<group>"; };
 		8F959127211D15BC00B8D772 /* LeetCache+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetCache+Test.swift"; sourceTree = "<group>"; };
 		8FA077E12123B3B8000E807D /* LeetNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetNumber.swift; sourceTree = "<group>"; };
@@ -109,6 +117,7 @@
 				57B7B12D2113290A00B63DB8 /* Array */,
 				575D2AEE210A9F800011F198 /* LinkList */,
 				5781E754211337570020AA2B /* Tree */,
+				8F5630A72216414500F5946A /* Hash */,
 				8F959124211D157A00B8D772 /* Cache */,
 				8FAF8F18212F9157001157EB /* DynamicProgramming */,
 				5742A5C6210959D800803BAC /* Main.storyboard */,
@@ -158,6 +167,17 @@
 				5781E760211E56060020AA2B /* LTArrayTableViewController.swift */,
 			);
 			path = Array;
+			sourceTree = "<group>";
+		};
+		8F5630A72216414500F5946A /* Hash */ = {
+			isa = PBXGroup;
+			children = (
+				8F5630A82216416900F5946A /* LeetHash.swift */,
+				8F5630AA221641A600F5946A /* LeetHash+Test.swift */,
+				8F5630AC221641D600F5946A /* LTHashTableViewController.swift */,
+				8F5630AE221642F700F5946A /* LTHashSet.swift */,
+			);
+			path = Hash;
 			sourceTree = "<group>";
 		};
 		8F959124211D157A00B8D772 /* Cache */ = {
@@ -263,15 +283,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F2AA26F2211173A00D4604D /* SinglyLikedList.swift in Sources */,
+				8F5630AD221641D600F5946A /* LTHashTableViewController.swift in Sources */,
 				5781E75F211E54DA0020AA2B /* MainTableViewController.swift in Sources */,
 				57B7B12F2113291F00B63DB8 /* LeetArray.swift in Sources */,
 				5781E761211E56060020AA2B /* LTArrayTableViewController.swift in Sources */,
 				574D4D9A210E96B800C323B3 /* LeetString+Test.swift in Sources */,
+				8F5630AF221642F700F5946A /* LTHashSet.swift in Sources */,
 				8FB837D8211289B500A3C73A /* LeetLinkList+Test.swift in Sources */,
 				5781E7532113328F0020AA2B /* LeetArray+Test.swift in Sources */,
 				8F959128211D15BC00B8D772 /* LeetCache+Test.swift in Sources */,
 				5742A5C5210959D800803BAC /* ViewController.swift in Sources */,
 				575D2AF0210A9FB00011F198 /* LeetString.swift in Sources */,
+				8F5630AB221641A600F5946A /* LeetHash+Test.swift in Sources */,
 				5781E76B2130F4430020AA2B /* LTDynamicTableViewController.swift in Sources */,
 				8F959126211D15A700B8D772 /* LeetCache.swift in Sources */,
 				8FA077E42123B438000E807D /* LeetNumber+Test.swift in Sources */,
@@ -283,6 +306,7 @@
 				8F016B8C210FE67300E93025 /* LeetLinkList.swift in Sources */,
 				8FA077E62123B462000E807D /* LTNumberTableViewController.swift in Sources */,
 				8FAF8F1E212F91B0001157EB /* LeetDynamic+Test.swift in Sources */,
+				8F5630A92216416900F5946A /* LeetHash.swift in Sources */,
 				8FAF8F1C212F9198001157EB /* LeetDynamic.swift in Sources */,
 				5781E763211E56540020AA2B /* LTLinkTableViewController.swift in Sources */,
 				5781E765211E56620020AA2B /* LTStringTableViewController.swift in Sources */,

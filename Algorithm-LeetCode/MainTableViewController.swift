@@ -10,7 +10,7 @@ import UIKit
 
 class MainTableViewController: BaseTableViewController {
     
-    var dataArray: [String] = ["数字", "字符串", "数组", "链表", "树", "动态规划"]
+    var dataArray: [String] = ["数字", "字符串", "数组", "链表", "哈希表", "树", "动态规划"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +53,10 @@ class MainTableViewController: BaseTableViewController {
         } else if indexPath.row == 3 {
             vc = LTLinkTableViewController()
         } else if indexPath.row == 4 {
-            vc = LTTreeTableViewController()
+            vc = LTHashTableViewController()
         } else if indexPath.row == 5 {
+            vc = LTTreeTableViewController()
+        } else if indexPath.row == 6 {
             vc = LTDynamicTableViewController()
         }
         

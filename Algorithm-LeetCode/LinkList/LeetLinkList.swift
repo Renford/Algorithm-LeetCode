@@ -313,6 +313,13 @@ extension LeetLinkList {
     }
 }
 
+// MARK: - 61. 旋转链表
+extension LeetLinkList {
+//    func rotateRight(_ head: ListNode?, _ k: Int) -> ListNode? {
+//
+//    }
+}
+
 extension LeetLinkList {
     func hasCycle(_ head: ListNode?) -> Bool {
         return false
