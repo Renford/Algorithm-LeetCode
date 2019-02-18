@@ -34,4 +34,47 @@ extension LeetHash {
         let ret22 = hashMap.get(2);
         print("===result: \(ret1) \(ret3) \(ret2) \(ret22)")
     }
+
+    @objc func testContainsDuplicate() {
+        let array = [
+            [1, 2, 3, 4],
+            [1, 1, 1],
+            [1],
+            []
+        ]
+
+        array.forEach { (arr) in
+            let result = containsDuplicate(arr)
+            print("===\(arr)===result:\(result)")
+        }
+    }
+
+    @objc func testSingleNumber() {
+        let array = [
+            [1, 2, 2, 3, 3],
+            [1, 6, 1],
+            [1, 1],
+            [6]
+        ]
+
+        array.forEach { (arr) in
+            let result = singleNumber(arr)
+            print("===\(arr)===result:\(result)")
+        }
+    }
+
+    @objc func testIntersection() {
+        let array = [
+            [[1, 2, 2, 3, 3], [1, 3]],
+            [[1, 3], [1, 3]],
+            [[1], [1, 3]],
+            [[], []],
+        ]
+
+        array.forEach { (arr) in
+            let result = intersection(arr[0], arr[1])
+            print("===\(arr)===result:\(result)")
+        }
+
+    }
 }
