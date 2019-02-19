@@ -11,11 +11,12 @@ import UIKit
 class LTHashTableViewController: BaseTableViewController {
 
     let algorithms = [
+        "136. 只出现一次的数字": "testSingleNumber",
+        "202. 快乐数": "testIsHappy",
+        "217. 存在重复元素": "testContainsDuplicate",
+        "349. 两个数组的交集": "testIntersection",
         "705. 设计哈希集合": "testLTHashSet",
         "706. 设计哈希映射": "testLTHashMap",
-        "217. 存在重复元素": "testContainsDuplicate",
-        "136. 只出现一次的数字": "testSingleNumber",
-        "349. 两个数组的交集": "testIntersection"
     ]
 
     let leetHash = LeetHash()

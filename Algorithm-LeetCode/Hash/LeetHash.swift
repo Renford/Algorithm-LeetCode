@@ -52,3 +52,33 @@ extension LeetHash {
         return res
     }
 }
+
+// MARK: - 202. 快乐数
+extension LeetHash {
+    func isHappy(_ n: Int) -> Bool {
+        if n == 1 {
+            return true
+        }
+        
+        var set = Set<Int>()
+        var sum = n
+        while true {
+            var temp = sum
+            sum = 0
+            while temp > 0 {
+                let num = temp % 10
+                sum += num * num
+                temp /= 10
+            }
+
+            if sum == 1 {
+                return true
+            } else if set.contains(sum) {
+                break
+            }
+
+            set.insert(sum)
+        }
+        return false
+    }
+}

@@ -77,4 +77,15 @@ extension LeetHash {
         }
 
     }
+
+    @objc func testIsHappy() {
+        let array = [
+            19, 20, 21, 22, 1
+        ]
+
+        array.forEach { (num) in
+            let result = isHappy(num)
+            print("===\(num)===result:\(result)")
+        }
+    }
 }
