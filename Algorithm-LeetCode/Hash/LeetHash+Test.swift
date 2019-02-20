@@ -88,4 +88,9 @@ extension LeetHash {
             print("===\(num)===result:\(result)")
         }
     }
+
+    @objc func testTwoSum() {
+        let result = twoSum([1, 2, 3, 4], 5)
+        print("===two num: sum:\(result)")
+    }
 }

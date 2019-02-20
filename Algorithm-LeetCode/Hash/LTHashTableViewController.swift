@@ -11,6 +11,7 @@ import UIKit
 class LTHashTableViewController: BaseTableViewController {
 
     let algorithms = [
+        "1. 两数之和": "testTwoSum",
         "136. 只出现一次的数字": "testSingleNumber",
         "202. 快乐数": "testIsHappy",
         "217. 存在重复元素": "testContainsDuplicate",

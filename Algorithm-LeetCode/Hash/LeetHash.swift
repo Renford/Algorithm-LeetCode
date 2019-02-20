@@ -82,3 +82,25 @@ extension LeetHash {
         return false
     }
 }
+
+// MARK: - 1. 两数之和
+extension LeetHash {
+    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        var result: [Int] = []
+
+        var dic = [Int: Int]()
+        for (index, num) in nums.enumerated() {
+            let temp = target - num
+            if dic.keys.contains(temp) {
+                result = [dic[temp]!, index]
+                break
+            } else {
+                if !dic.keys.contains(num) {
+                    dic[num] = index
+                }
+            }
+        }
+
+        return result
+    }
+}
