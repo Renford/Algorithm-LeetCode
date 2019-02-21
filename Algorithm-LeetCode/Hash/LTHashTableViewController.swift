@@ -14,6 +14,7 @@ class LTHashTableViewController: BaseTableViewController {
         "1. 两数之和": "testTwoSum",
         "136. 只出现一次的数字": "testSingleNumber",
         "202. 快乐数": "testIsHappy",
+        "205. 同构字符串": "testIsIsomorphic",
         "217. 存在重复元素": "testContainsDuplicate",
         "349. 两个数组的交集": "testIntersection",
         "705. 设计哈希集合": "testLTHashSet",

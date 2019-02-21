@@ -93,4 +93,18 @@ extension LeetHash {
         let result = twoSum([1, 2, 3, 4], 5)
         print("===two num: sum:\(result)")
     }
+
+    @objc func testIsIsomorphic() {
+        let arrary = [
+            ["aab", "ddc"],
+            ["abd", "dsd"],
+            ["a", "d"],
+            ["b", "ccc"]
+        ]
+
+        arrary.forEach { (arr) in
+            let result = isIsomorphic(arr[0], arr[1])
+            print("===str:\(arr)===result:\(result)")
+        }
+    }
 }

@@ -104,3 +104,30 @@ extension LeetHash {
         return result
     }
 }
+
+extension LeetHash {
+    func isIsomorphic(_ s: String, _ t: String) -> Bool {
+        if s.count != t.count {
+            return false
+        }
+
+        var sDic: [Character: Character] = [:]
+        var tDic: [Character: Character] = [:]
+        for (i, sc) in s.enumerated() {
+            let tc = t[String.Index(encodedOffset: i)]
+
+            if let tempTc = sDic[sc], tempTc != tc {
+                return false
+            }
+
+            if let tempSc = tDic[tc], tempSc != sc {
+                return false
+            }
+
+            sDic[sc] = tc
+            tDic[tc] = sc
+        }
+
+        return true
+    }
+}
