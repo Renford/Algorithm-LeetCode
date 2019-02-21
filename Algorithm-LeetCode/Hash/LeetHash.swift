@@ -53,6 +53,14 @@ extension LeetHash {
     }
 }
 
+// MARK: - 350. 两个数组的交集 II
+extension LeetHash {
+    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+
+        return []
+    }
+}
+
 // MARK: - 202. 快乐数
 extension LeetHash {
     func isHappy(_ n: Int) -> Bool {
@@ -105,6 +113,7 @@ extension LeetHash {
     }
 }
 
+// MARK: - 205. 同构字符串
 extension LeetHash {
     func isIsomorphic(_ s: String, _ t: String) -> Bool {
         if s.count != t.count {
@@ -129,5 +138,54 @@ extension LeetHash {
         }
 
         return true
+    }
+}
+
+// MARK: - 599. 两个列表的最小索引总和
+extension LeetHash {
+    func findRestaurant(_ list1: [String], _ list2: [String]) -> [String] {
+        let dic1 = list1.enumerated().reduce([:]) { (dic, item) -> [String: Int] in
+            let (index, value) = item
+            var tempDic = dic
+            tempDic[value] = index
+            return tempDic
+        }
+        let dic2 = list2.enumerated().reduce([:]) { (dic, item) -> [String: Int] in
+            let (index, value) = item
+            var tempDic = dic
+            tempDic[value] = index
+            return tempDic
+        }
+
+        var result: [String] = []
+        var sum = Int.max
+        dic1.keys.forEach { (name) in
+            if dic2.keys.contains(name) {
+                if let index1 = dic1[name], let index2 = dic2[name] {
+                    if sum > index1 + index2 {
+                        sum = index1 + index2
+                        result = [name]
+                    } else if sum == index1 + index2 {
+                        result.append(name)
+                    }
+                }
+            }
+        }
+
+        return result
+    }
+}
+
+// MARK: - 387. 字符串中的第一个唯一字符
+extension LeetHash {
+    func firstUniqChar(_ s: String) -> Int {
+        var result = -1
+        for (index, value) in s.enumerated() {
+            if let lastIndex = s.lastIndex(of: value), let firstIndex = s.firstIndex(of: value), firstIndex == lastIndex {
+                result = index
+                break
+            }
+        }
+        return result
     }
 }

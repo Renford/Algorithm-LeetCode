@@ -78,6 +78,20 @@ extension LeetHash {
 
     }
 
+    @objc func testIntersect() {
+        let array = [
+            [[1, 2, 2, 3, 3], [1, 3]],
+            [[1, 3], [1, 3]],
+            [[1], [1, 3]],
+            [[], []],
+            ]
+
+        array.forEach { (arr) in
+            let result = intersect(arr[0], arr[1])
+            print("===\(arr)===result:\(result)")
+        }
+    }
+
     @objc func testIsHappy() {
         let array = [
             19, 20, 21, 22, 1
@@ -105,6 +119,29 @@ extension LeetHash {
         arrary.forEach { (arr) in
             let result = isIsomorphic(arr[0], arr[1])
             print("===str:\(arr)===result:\(result)")
+        }
+    }
+
+    @objc func testFindRestaurant() {
+        let array = [
+            [["111", "666", "1223", "222"], ["111", "222"]],
+            [["111", "222"], ["111", "222"]],
+            [["111", "222"], ["222", "111"]],
+            [["111"], ["111", "333", "555"]],
+            [["111"], ["123", "333"]],
+        ]
+
+        array.forEach { (arr) in
+            let result = findRestaurant(arr[0], arr[1])
+            print("===str:\(arr)===result:\(result)")
+        }
+    }
+
+    @objc func testFirstUniqChar() {
+        let array = ["arrrra", "aaaar", "adsda"]
+        array.forEach { (str) in
+            let result = firstUniqChar(str)
+            print("===str:\(str)===result:\(result)")
         }
     }
 }

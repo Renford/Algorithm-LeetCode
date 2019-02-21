@@ -40,6 +40,7 @@
 		8FAF8F1C212F9198001157EB /* LeetDynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAF8F1B212F9198001157EB /* LeetDynamic.swift */; };
 		8FAF8F1E212F91B0001157EB /* LeetDynamic+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAF8F1D212F91B0001157EB /* LeetDynamic+Test.swift */; };
 		8FB837D8211289B500A3C73A /* LeetLinkList+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB837D7211289B500A3C73A /* LeetLinkList+Test.swift */; };
+		8FDFD1F5221E9950002CE069 /* NSObject+Addtions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDFD1F4221E9950002CE069 /* NSObject+Addtions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		8FAF8F1B212F9198001157EB /* LeetDynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetDynamic.swift; sourceTree = "<group>"; };
 		8FAF8F1D212F91B0001157EB /* LeetDynamic+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetDynamic+Test.swift"; sourceTree = "<group>"; };
 		8FB837D7211289B500A3C73A /* LeetLinkList+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeetLinkList+Test.swift"; sourceTree = "<group>"; };
+		8FDFD1F4221E9950002CE069 /* NSObject+Addtions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Addtions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				5742A5C4210959D800803BAC /* ViewController.swift */,
 				5781E75E211E54DA0020AA2B /* MainTableViewController.swift */,
 				5781E768211E590D0020AA2B /* BaseTableViewController.swift */,
+				8FDFD1F4221E9950002CE069 /* NSObject+Addtions.swift */,
 				8FA077E02123B3A4000E807D /* Number */,
 				575D2AED210A9F800011F198 /* String */,
 				57B7B12D2113290A00B63DB8 /* Array */,
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F5630B1221657C400F5946A /* LTHashMap.swift in Sources */,
+				8FDFD1F5221E9950002CE069 /* NSObject+Addtions.swift in Sources */,
 				8F2AA26F2211173A00D4604D /* SinglyLikedList.swift in Sources */,
 				8F5630AD221641D600F5946A /* LTHashTableViewController.swift in Sources */,
 				5781E75F211E54DA0020AA2B /* MainTableViewController.swift in Sources */,
