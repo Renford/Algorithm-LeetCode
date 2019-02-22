@@ -49,6 +49,21 @@ extension LeetHash {
         }
     }
 
+    @objc func testContainsNearbyDuplicate() {
+        let dic = [
+            3: [1, 2, 3, 1],
+            1: [1, 0, 1, 1],
+            2: [1, 2, 3, 1, 2, 3],
+        ]
+        dic.keys.forEach { (key) in
+            if let arr = dic[key] {
+                let result = containsNearbyDuplicate(arr, key)
+                print("===nearby duplicate result: \(arr), \(key)\n\(result)")
+            }
+        }
+
+    }
+
     @objc func testSingleNumber() {
         let array = [
             [1, 2, 2, 3, 3],

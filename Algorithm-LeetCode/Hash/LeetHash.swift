@@ -26,6 +26,27 @@ extension LeetHash {
     }
 }
 
+// MARK: - 219. 存在重复元素 II
+extension LeetHash {
+    func containsNearbyDuplicate(_ nums: [Int], _ k: Int) -> Bool {
+        var dic: [Int: [Int]] = [:]
+        for (index, num) in nums.enumerated() {
+            if var arr = dic[num], arr.count > 0 {
+                for temp in arr {
+                    if abs(temp - index) <= k {
+                        return true
+                    }
+                }
+                arr.append(index)
+                dic[num] = arr
+            } else {
+                dic[num] = [index]
+            }
+        }
+        return false
+    }
+}
+
 // MARK: - 136. 只出现一次的数字
 extension LeetHash {
     func singleNumber(_ nums: [Int]) -> Int {
@@ -189,3 +210,4 @@ extension LeetHash {
         return result
     }
 }
+
