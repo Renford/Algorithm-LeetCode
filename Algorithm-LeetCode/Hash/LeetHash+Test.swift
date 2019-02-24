@@ -95,7 +95,7 @@ extension LeetHash {
 
     @objc func testIntersect() {
         let array = [
-            [[1, 2, 2, 3, 3], [1, 3]],
+            [[1, 2, 2, 3, 3], [1, 3, 3]],
             [[1, 3], [1, 3]],
             [[1], [1, 3]],
             [[], []],
@@ -157,6 +157,19 @@ extension LeetHash {
         array.forEach { (str) in
             let result = firstUniqChar(str)
             print("===str:\(str)===result:\(result)")
+        }
+    }
+    
+    @objc func testGroupAnagrams() {
+        let array = [
+            ["eat", "tea", "tan", "ate", "nat", "bat"],
+            ["eat", "tea", "tan", "ate"],
+            ["eat", "tea"],
+        ]
+        
+        array.forEach { (arr) in
+            let result = groupAnagrams(arr)
+            print("===str:\(arr)===result:\(result)")
         }
     }
 }

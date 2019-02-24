@@ -77,8 +77,25 @@ extension LeetHash {
 // MARK: - 350. 两个数组的交集 II
 extension LeetHash {
     func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
-
-        return []
+        
+        var dic: [Int: Int] = [:]
+        nums1.forEach { (num) in
+            if let count = dic[num] {
+                dic[num] = count + 1
+            } else {
+                dic[num] = 1
+            }
+        }
+        
+        var result: [Int] = []
+        nums2.forEach { (num) in
+            if let count = dic[num], count > 0 {
+                result.append(num)
+                dic[num] = count - 1
+            }
+        }
+        
+        return result
     }
 }
 
@@ -208,6 +225,30 @@ extension LeetHash {
             }
         }
         return result
+    }
+}
+
+// MARK: - 49. 字母异位词分组
+extension LeetHash {
+    func groupAnagrams(_ strs: [String]) -> [[String]] {
+        var dic: [String: [String]] = [:]
+        strs.forEach { (str) in
+            let key = getSortedStr(str)
+            var arr: [String] = []
+            if let tempArr = dic[key] {
+                arr = tempArr
+            }
+            arr.append(str)
+            dic[key] = arr
+        }
+        
+        return dic.keys.compactMap { (key) -> [String] in
+            return dic[key]!
+        }
+    }
+    
+    fileprivate func getSortedStr(_ str: String) -> String {
+        return str.sorted().description
     }
 }
 

@@ -12,6 +12,7 @@ class LTHashTableViewController: BaseTableViewController {
 
     let algorithms = [
         "1. 两数之和": "testTwoSum",
+        "49. 字母异位词分组": "testGroupAnagrams",
         "136. 只出现一次的数字": "testSingleNumber",
         "202. 快乐数": "testIsHappy",
         "205. 同构字符串": "testIsIsomorphic",
