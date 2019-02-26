@@ -24,6 +24,7 @@ class LTHashTableViewController: BaseTableViewController {
         "599. 两个列表的最小索引总和": "testFindRestaurant",
         "705. 设计哈希集合": "testLTHashSet",
         "706. 设计哈希映射": "testLTHashMap",
+        "771. 宝石与石头": "testNumJewelsInStones",
     ]
 
     let leetHash = LeetHash()

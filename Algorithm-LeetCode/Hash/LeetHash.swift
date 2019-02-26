@@ -252,3 +252,17 @@ extension LeetHash {
     }
 }
 
+// MARK: - 771. 宝石与石头
+extension LeetHash {
+    func numJewelsInStones(_ J: String, _ S: String) -> Int {
+        var result = 0
+
+        S.forEach { (c) in
+            if J.contains(c) {
+                result += 1
+            }
+        }
+
+        return result
+    }
+}

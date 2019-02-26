@@ -172,4 +172,16 @@ extension LeetHash {
             print("===str:\(arr)===result:\(result)")
         }
     }
+
+    @objc func testNumJewelsInStones() {
+        let array = [
+            ["aA", "aAAbbbb"],
+            ["ab", "aabbd"]
+        ]
+
+        array.forEach { (arr) in
+            let result = numJewelsInStones(arr[0], arr[1])
+            print("===str:\(arr)===result:\(result)")
+        }
+    }
 }
