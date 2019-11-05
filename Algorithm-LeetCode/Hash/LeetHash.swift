@@ -252,6 +252,41 @@ extension LeetHash {
     }
 }
 
+// MARK: - 347. 前K个高频元素
+extension LeetHash {
+    func topKFrequent(_ nums: [Int], _ k: Int) -> [Int] {
+        var dic: [Int: Int] = [:]
+        nums.forEach { (num) in
+            if let count = dic[num] {
+                dic[num] = count + 1
+            } else {
+                dic[num] = 1
+            }
+        
+        }
+        
+        var map: [Int: [Int]] = [:]
+        dic.keys.forEach { (key) in
+            if let count = dic[key], var arr = map[count] {
+                arr.append(key)
+                map[count] = arr
+            } else {
+                map[dic[key]!] = [key]
+            }
+        }
+        
+        let keyArr = map.keys.sorted().reversed()
+        if keyArr.count < k {
+            return nums
+        }
+        
+        var result: [Int] = []
+        Array(keyArr.prefix(k)).forEach { (key) in
+            result += map[key]!
+        }
+	}
+}
+        
 // MARK: - 771. 宝石与石头
 extension LeetHash {
     func numJewelsInStones(_ J: String, _ S: String) -> Int {

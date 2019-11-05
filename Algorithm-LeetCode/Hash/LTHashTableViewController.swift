@@ -18,6 +18,7 @@ class LTHashTableViewController: BaseTableViewController {
         "205. 同构字符串": "testIsIsomorphic",
         "217. 存在重复元素": "testContainsDuplicate",
         "219. 存在重复元素 II": "testContainsNearbyDuplicate",
+        "347. 前K个高频元素": "testTopKFrequent",
         "349. 两个数组的交集": "testIntersection",
         "350. 两个数组的交集 II": "testIntersect",
         "387. 字符串中的第一个唯一字符": "testFirstUniqChar",

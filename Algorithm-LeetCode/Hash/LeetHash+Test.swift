@@ -172,6 +172,19 @@ extension LeetHash {
             print("===str:\(arr)===result:\(result)")
         }
     }
+    
+    @objc func testTopKFrequent() {
+        let array: [[Int]] = [
+            [1, 2, 1, 1, 3, 2],
+            [5, 3]
+        ]
+        let nums = [2, 1]
+        
+        for (index, arr) in array.enumerated() {
+            let result = topKFrequent(arr, nums[index])
+            print("===\(arr)==top \(nums[index]) result", result)
+		}
+	}
 
     @objc func testNumJewelsInStones() {
         let array = [
