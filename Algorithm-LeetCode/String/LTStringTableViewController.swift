@@ -17,7 +17,8 @@ class LTStringTableViewController: BaseTableViewController {
         "5. 最长回文子串": "testLongestPalindrome",
         "14. 最长公共前缀": "testCommonPrefix",
         "389. 找不同": "testFindTheDifference",
-        "639. 解码方法": "testNumDecodings"
+        "639. 解码方法": "testNumDecodings",
+        "344. 反转字符串": "testReverseString"
     ]
     
     let leetString = LeetString()

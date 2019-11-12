@@ -102,4 +102,22 @@ extension LeetString {
         }
         print("\n=========解码 222=========\n")
     }
+    
+    @objc func testReverseString() {
+        print("\n========字符串反转 111=========\n")
+        let array = [
+            "1234567",
+            "1",
+            ""
+        ]
+        
+        array.forEach { (str) in
+            var chars = str.map { (c) -> Character in
+                return c
+            }
+            reverseString(&chars)
+            print("\(str) result: \(chars)")
+        }
+        print("\n=========字符串反转 222=========\n")
+    }
 }
